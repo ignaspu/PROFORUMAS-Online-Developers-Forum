@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import OffNav from "../offNav/OffNav";
 
 const StyledHeader = styled.header`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border-bottom: 1px solid black;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  height: 70px;
   > div > h1{
     font-family: 'Press Start 2P';
     font-size: 1rem;
@@ -16,18 +17,6 @@ const StyledHeader = styled.header`
   > div{
     width: 30%;
   }
-  > nav {
-    > ul{
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 20px;
-      > li{
-        padding: 5px;
-        list-style-type: none;
-      }
-    }
-  }
   
 `;
 
@@ -37,14 +26,7 @@ const Header = () => {
       <div>
         <h1>PROFORUMAS.lt</h1>
       </div>
-      <nav>
-        <ul>
-          <li>Apie mus</li>
-          <li>Visi klausimai</li>
-          <li>Prisijungti</li>
-          <li>Užsiregistruoti</li>
-        </ul>
-      </nav>
+      <OffNav/>
     </StyledHeader>
   );
 }

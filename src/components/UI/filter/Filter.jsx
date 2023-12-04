@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 const StyledFilter = styled.div`
   display: flex;
-  padding: 0 10px;
+  padding: 5px 10px;
   justify-content: space-between;
-  border-bottom: 1px solid black;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin: 5px 0;
   > div > h1{
     font-size: 0.75rem;
     display: inline-block;
@@ -27,6 +26,7 @@ const StyledFilter = styled.div`
 
 const Filter = () => {
   return (
+    <>
     <StyledFilter>
       <div>
         <h1>Filtravimas:</h1>
@@ -39,6 +39,7 @@ const Filter = () => {
         <button>Nuo mažiausio</button>
       </div>
     </StyledFilter>
+    </>
   );
 }
 
