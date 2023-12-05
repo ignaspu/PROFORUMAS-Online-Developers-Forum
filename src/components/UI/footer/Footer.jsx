@@ -2,12 +2,14 @@ import styled from "styled-components";
 
 const StyledFooter = styled.footer`
 background-color: #c9c8c8;
+padding: 10px 0px 5px 0px;
   > div{
     display: flex;
     justify-content: space-evenly;
     > div{
       > h1{
         font-size: 1rem;
+        margin: 2px;
       }
       > ul{
         margin: 0;

@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "admin",
+      "email": "lol@lol.lt",
+      "password": "pass",
+      "age": 24,
+      "profilePicture": "https://google.lt"
+    },
+    {
+      "id": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
+      "vartotojoVardas": "dingas",
+      "email": "asd@ads.tt",
+      "slaptazodis": "$2a$08$ZKJWzeY.yOxyL9OPnSbJIONkRwN1p1vYT8AC2l9RUE05DDQNmUTUG",
+      "amzius": 15,
+      "registracijosData": "2023-12-04",
+      "profilioNuotrauka": "https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg"
+    }
+  ]
+}

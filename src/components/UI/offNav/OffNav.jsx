@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledNav = styled.nav`
@@ -22,10 +23,10 @@ const OffNav = () => {
   return (
     <StyledNav>
       <ul>
+        <li><Link style={{textDecoration: 'none', color: 'black'}} to="/">Pagrindinis</Link></li>
         <li>Apie mus</li>
-        <li>Visi klausimai</li>
-        <li>Prisijungti</li>
-        <li>Užsiregistruoti</li>
+        <li><Link style={{textDecoration: 'none', color: 'black'}} to="/prisijungti">Prisijungti</Link></li>
+        <li><Link style={{textDecoration: 'none', color: 'black'}} to="/registracija">Užsiregistruoti</Link></li>
       </ul>
     </StyledNav>
   );
