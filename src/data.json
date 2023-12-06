@@ -97,6 +97,25 @@
       "ivertinimas": 0,
       "atsakyta": false,
       "redaguota": true
+    },
+    {
+      "id": "79ff2d0e-eca5-43b6-98bd-ab8f349d7094",
+      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
+      "pavadinimas": "Kaip pakeisti srifto spalva?",
+      "aprasymas": "Kaip pakeisti srifto spalva per css?",
+      "zymos": [
+        "spalva",
+        " sriftas",
+        " css"
+      ],
+      "nuotrauka": "",
+      "autorius": "dingas",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "isiminta": 0,
+      "ivertinimas": 0,
+      "atsakyta": false,
+      "redaguota": false
     }
   ],
   "comments": [
@@ -114,24 +133,57 @@
     {
       "id": "660ab111-6364-4d0f-9759-1eeb78b60f93",
       "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
-      "komentaras": "Reikia prideti p { font-family: 'Roboto' }",
+      "komentaras": "1. Reikia prideti p { font-family: 'Roboto' }",
       "autorius": "dingas",
       "publikuota": "12/6/2023",
       "balsuSkaicius": 0,
       "ivertinimas": 0,
       "postId": "a0b5106b-9598-4d78-b902-9a086272d0d5",
+      "redaguota": true
+    },
+    {
+      "id": "2d636a54-658a-44fd-98fc-e76767bb6a40",
+      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
+      "komentaras": "Labas",
+      "autorius": "dingas",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "79ff2d0e-eca5-43b6-98bd-ab8f349d7094",
       "redaguota": false
     },
     {
-      "id": "093a8f57-9d50-4b9f-b800-6a362346719a",
+      "id": "e0b8e57d-f2c4-41aa-8c29-841c553679b6",
       "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
-      "komentaras": "Nice wow",
+      "komentaras": "sveeeee",
       "autorius": "dingas",
       "publikuota": "12/6/2023",
       "balsuSkaicius": 0,
       "ivertinimas": 0,
       "postId": "4e8596f8-d06b-4f03-8d31-b4401925a4ca",
       "redaguota": false
+    },
+    {
+      "id": "2fd17d13-617e-4b0b-b908-eead9395f6e1",
+      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
+      "komentaras": "aasdasas",
+      "autorius": "dingas",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "4e8596f8-d06b-4f03-8d31-b4401925a4ca",
+      "redaguota": false
+    },
+    {
+      "id": "cbb77562-98d6-4e87-882a-7b088b5b2b9f",
+      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
+      "komentaras": "asddddddddd",
+      "autorius": "dingas",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "a0b5106b-9598-4d78-b902-9a086272d0d5",
+      "redaguota": true
     }
   ]
 }

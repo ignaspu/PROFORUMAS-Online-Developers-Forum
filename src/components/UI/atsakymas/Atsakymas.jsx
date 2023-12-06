@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { useContext } from "react";
+import UsersContext from "../../contexts/UsersContext";
 import CommentsContext from "../../contexts/CommentsContext";
+import RedaguotiKomentara from "../redaguotiKomentara/RedaguotiKomentara";
 
 const StyledComments = styled.div`
   margin: 5px 0;
@@ -8,6 +10,7 @@ const StyledComments = styled.div`
   display: flex;
   padding: 5px 10px;
   gap: 30px;
+  justify-content: space-between;
   > .rating {
     display: flex;
     flex-direction: column;
@@ -39,7 +42,8 @@ const StyledComments = styled.div`
 
 const Atsakymas = ({ data }) => {
 
-  const { setComments, CommentsActionTypes, comments } = useContext(CommentsContext);
+  const { loggedInUser } = useContext(UsersContext);
+  const { setComments, CommentsActionTypes, setArRedaguota, arRedaguota } = useContext(CommentsContext);
 
   return (
     <StyledComments>
@@ -59,6 +63,23 @@ const Atsakymas = ({ data }) => {
           <p>Balsų skaičius: {data.balsuSkaicius}</p>
         </div>
       </div>
+      {
+        loggedInUser.id === data.userId &&
+        <div>
+          <button
+            onClick={() => setArRedaguota({id: data.id})}
+          >Redaguoti</button>
+          <button
+            onClick={() => setComments({ type: CommentsActionTypes.remove, id: data.id })}
+          >Ištrinti</button>
+        </div>
+      }
+      {
+        arRedaguota.id === data.id &&
+        <RedaguotiKomentara
+        id={data.id}
+        />
+      }
     </StyledComments >
   );
 }

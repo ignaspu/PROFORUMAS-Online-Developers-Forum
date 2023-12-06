@@ -31,6 +31,10 @@ const StyledMain = styled.main`
     height: auto;
     margin: 0 auto;
   }
+  > div.mygtukai{
+    justify-content: flex-end;
+    gap: 5px;
+  }
 `;
 
 const SingleQuestion = () => {
@@ -41,37 +45,38 @@ const SingleQuestion = () => {
   const { setTopics, TopicActionTypes } = useContext(TopicContext);
   const { loggedInUser } = useContext(UsersContext);
 
+  
   useEffect(() => {
     fetch(`http://localhost:8080/topics/${id}`)
-      .then(res => res.json())
+    .then(res => res.json())
       .then(data => {
         if (!data.pavadinimas) {
           navigate('/');
         }
         setQuestion(data);
       })
-  }, []);
+    }, []);
 
   return (
     question &&
     <StyledMain>
       <h1>{question.pavadinimas}</h1>
-      <i>{question.redaguota !== false ? `(Klausimas buvo redaguotas)` : null}</i>
       {
         loggedInUser.id === question.userId &&
-        <>
+        <div className="mygtukai">
           <button
             onClick={() => navigate(`/klausimas/redaguoti/${id}`)}
-          >Redaguoti</button>
+            >Redaguoti</button>
           <button
             onClick={() => {
               setTopics({ type: TopicActionTypes.remove, id: id });
               navigate("/");
             }}
-          >Ištrinti</button>
-        </>
+            >Ištrinti</button>
+        </div>
       }
       <p>{question.aprasymas}</p>
+      <p><i>{question.redaguota !== false ? `(Klausimas buvo redaguotas)` : null}</i></p>
       <div>
         <div>
           <Link className="linkas" to={question.nuotrauka !== "" ? question.nuotrauka : null} target="_blank"><img
