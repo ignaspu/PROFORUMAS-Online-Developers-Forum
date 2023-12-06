@@ -1,0 +1,78 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "admin",
+      "email": "lol@lol.lt",
+      "password": "pass",
+      "age": 24,
+      "profilePicture": "https://google.lt",
+      "likedIds": [
+        "1"
+      ]
+    },
+    {
+      "id": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
+      "vartotojoVardas": "dingas",
+      "email": "asd@ads.tt",
+      "slaptazodis": "$2a$08$ZKJWzeY.yOxyL9OPnSbJIONkRwN1p1vYT8AC2l9RUE05DDQNmUTUG",
+      "amzius": 15,
+      "registracijosData": "2023-12-04",
+      "profilioNuotrauka": "https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg",
+      "likedIds": [
+        "1"
+      ]
+    }
+  ],
+  "topics": [
+    {
+      "id": 1,
+      "pavadinimas": "Kaip sukurti ToDo aplikacija naudojant React?",
+      "aprasymas": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam libero saepe consequuntur ab obcaecati ipsam, perferendis dolore iure in placeat unde magni eaque delectus doloribus quasi vitae, distinctio vel! Architecto",
+      "autorius": "mouse558",
+      "publikuota": "2023-01-02",
+      "balsuSkaicius": 12,
+      "isiminta": 2,
+      "ivertinimas": 8,
+      "nuotrauka": "",
+      "userId": 1,
+      "zymos": [
+        "zyma",
+        "Antra"
+      ],
+      "atsakyta": false,
+      "redaguota": false
+    },
+    {
+      "id": "6fa0c282-1eef-4f60-bb9b-26107c8e91e7",
+      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
+      "pavadinimas": "Remove old resources on Cloudinary",
+      "aprasymas": "I'm trying to use CloudinaryDotNet (Cloudinary .NET SDK) to delete resources that has a created date older than a specific date and has a specific prefix (the beginning of a public id if I understand things correctly). I haven't found any really good way of doing this.  So far I have come up with a solution where I have to list all the resources 500 at a time, since that is the maximum of resources returned by the method ListResources. When I have gathered the public ids of the resources I want removed I delete them using the method DeleteResources.",
+      "zymos": [
+        "help",
+        " me",
+        " i dont know"
+      ],
+      "nuotrauka": "https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg",
+      "publikuota": "12/5/2023",
+      "balsuSkaicius": 0,
+      "isiminta": 0,
+      "ivertinimas": 0,
+      "autorius": "dingas",
+      "atsakyta": false,
+      "redaguota": false
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "postId": 1,
+      "autorius": "dingas",
+      "komentaras": "Wow aciu, nezinojau kad taip galima",
+      "autoriausId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
+      "balsuSkaicius": 12,
+      "ivertinimas": 8,
+      "redaguota": false
+    }
+  ]
+}

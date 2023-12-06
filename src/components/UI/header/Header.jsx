@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import OffNav from "../offNav/OffNav";
+import UsersContext from "../../contexts/UsersContext";
+import { useContext } from "react";
+import OnNav from "../onNav/OnNav";
 
 const StyledHeader = styled.header`
   display: flex;
@@ -21,12 +24,19 @@ const StyledHeader = styled.header`
 `;
 
 const Header = () => {
+
+  const { loggedInUser } = useContext(UsersContext)
+
   return (
     <StyledHeader>
       <div>
-        <h1>PROFORUMAS.lt</h1>
+       <h1>PROFORUMAS.lt</h1>
       </div>
-      <OffNav/>
+      {
+        ! loggedInUser
+        ? <OffNav/>
+        : <OnNav/>
+      }
     </StyledHeader>
   );
 }

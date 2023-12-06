@@ -1,5 +1,7 @@
 import Topic from "../topic/Topic";
+import { useContext } from "react";
 import styled from "styled-components";
+import TopicContext from "../../contexts/TopicContext";
 
 const StyledMain = styled.main`
   > :last-child{
@@ -8,17 +10,19 @@ const StyledMain = styled.main`
 `;
 
 const Topics = () => {
+
+  const { topics } = useContext(TopicContext);
+
   return (
     <StyledMain>
-      <Topic/>
-      <Topic/>
-      <Topic/>
-      <Topic/>
-      <Topic/>
-      <Topic/>
-      <Topic/>
-      <Topic/>
-      <Topic/>
+      {
+        topics.map(singleTopic => {
+          return <Topic 
+            key={singleTopic.id}
+            data={singleTopic}
+          />
+        })
+      }
     </StyledMain>
   );
 }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useNavigate } from "react-router";
 
 const StyledDiv = styled.div`
   margin: 5px 0;
@@ -16,28 +17,42 @@ const StyledDiv = styled.div`
     > h1{
       font-size: 1.25rem;
     }
+    > h1:hover{
+      text-decoration: underline;
+    }
     > p{
       font-size: 0.8rem;
     }
   }
 `;
 
-const Topic = () => {
+const Topic = ({ data }) => {
+
+  const navigate = useNavigate();
+
   return (
     <StyledDiv>
       <div>
-        <p>Balsų skaičius: 12</p>
-        <p>Įsimintas: 3 kartus</p>
-        <p>Įvertinimas: 8</p>
+        <p>Balsų skaičius: {data.balsuSkaicius}</p>
+        <p>Įsimintas: {data.isiminta} kartus</p>
+        <p>Įvertinimas: {data.ivertinimas}</p>
       </div>
       <div className="content">
-        <h1>Kaip sukurti ToDo aplikacija naudojant React?</h1>
-        <p className="textarea">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam libero saepe consequuntur ab obcaecati ipsam, perferendis dolore iure in placeat unde magni eaque delectus doloribus quasi vitae, distinctio vel! Architecto...</p>
+        <h1
+          onClick={() => navigate(`/klausimas/${data.id}`)}
+          style={{cursor:'pointer'}}
+        >{data.pavadinimas}</h1>
+        <p className="textarea">
+          {
+            data.aprasymas.length > 200
+              ? data.aprasymas.substring(0, 200 - 3) + " ..."
+              : data.aprasymas
+          }
+        </p>
       </div>
       <div>
-        <p>Autorius: mouse558</p>
-        <p>Publikuota: 2023-01-02</p>
-        <i class="bi bi-heart-fill"> Įsimintas</i>
+        <p>Autorius: {data.autorius}</p>
+        <p>Publikuota: {data.publikuota}</p>
       </div>
     </StyledDiv>
   );
