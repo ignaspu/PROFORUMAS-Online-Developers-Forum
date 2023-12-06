@@ -8,6 +8,7 @@ import { Routes, Route } from "react-router-dom";
 import UzduotiKlausima from './components/pages/uzduotiKlausima/UzduotiKlausima';
 import ManoKlausimai from './components/pages/manoklausimai/ManoKlausimai';
 import SingleQuestion from './components/pages/singleQuestion/SingleQuestion';
+import RedaguotiKlausima from './components/pages/redaguotiKlausima/RedaguotiKlausima';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="manoklausimai" element={<ManoKlausimai />} />
         <Route path="/klausimas">
           <Route path=":id" element={<SingleQuestion />} />
+          <Route path="redaguoti/:id" element={<RedaguotiKlausima />} />
         </Route>
       </Routes>
       <Footer />
