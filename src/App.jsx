@@ -6,6 +6,8 @@ import Login from './components/pages/login/Login';
 import Register from './components/pages/register/Register';
 import { Routes, Route } from "react-router-dom";
 import UzduotiKlausima from './components/pages/uzduotiKlausima/UzduotiKlausima';
+import ManoKlausimai from './components/pages/manoklausimai/ManoKlausimai';
+import SingleQuestion from './components/pages/singleQuestion/SingleQuestion';
 
 function App() {
   return (
@@ -16,6 +18,10 @@ function App() {
         <Route path="registracija" element={<Register />} />
         <Route path="prisijungti" element={<Login />} />
         <Route path="uzduotiklausima" element={<UzduotiKlausima />} />
+        <Route path="manoklausimai" element={<ManoKlausimai />} />
+        <Route path="/klausimas">
+          <Route path=":id" element={<SingleQuestion />} />
+        </Route>
       </Routes>
       <Footer />
     </>

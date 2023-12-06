@@ -47,7 +47,7 @@ const OnNav = () => {
         <li><Link style={{textDecoration: 'none', color: 'black'}} to="/">Pagrindinis</Link></li>
         <li>Mėgstami klausimai</li>
         <li><Link style={{textDecoration: 'none', color: 'black'}} to="/uzduotiklausima">Užduoti klausimą</Link></li>
-        <li className="klausimai">Mano klausimai</li>
+        <li><Link style={{textDecoration: 'none', color: 'black'}} to="/manoklausimai">Mano klausimai</Link></li>
       </ul>
       <div className="profilis">
         <img src={loggedInUser.profilioNuotrauka} alt="profilio nuotrauka" />

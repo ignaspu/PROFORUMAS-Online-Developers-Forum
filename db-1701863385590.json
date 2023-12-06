@@ -40,8 +40,7 @@
         "zyma",
         "Antra"
       ],
-      "atsakyta": false,
-      "redaguota": false
+      "atsakyta": false
     },
     {
       "id": "6fa0c282-1eef-4f60-bb9b-26107c8e91e7",
@@ -59,20 +58,7 @@
       "isiminta": 0,
       "ivertinimas": 0,
       "autorius": "dingas",
-      "atsakyta": false,
-      "redaguota": false
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "postId": 1,
-      "autorius": "dingas",
-      "komentaras": "Wow aciu, nezinojau kad taip galima",
-      "autoriausId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
-      "balsuSkaicius": 12,
-      "ivertinimas": 8,
-      "redaguota": false
+      "atsakyta": false
     }
   ]
 }

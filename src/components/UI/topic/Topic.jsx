@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import UsersContext from "../../contexts/UsersContext";
-import { useContext } from "react";
-import TopicContext from "../../contexts/TopicContext";
+import { useNavigate } from "react-router";
 
 const StyledDiv = styled.div`
   margin: 5px 0;
@@ -19,6 +17,9 @@ const StyledDiv = styled.div`
     > h1{
       font-size: 1.25rem;
     }
+    > h1:hover{
+      text-decoration: underline;
+    }
     > p{
       font-size: 0.8rem;
     }
@@ -27,8 +28,8 @@ const StyledDiv = styled.div`
 
 const Topic = ({ data }) => {
 
-  const { loggedInUser, setLoggedInUser } = useContext(UsersContext);
-  
+  const navigate = useNavigate();
+
   return (
     <StyledDiv>
       <div>
@@ -37,7 +38,10 @@ const Topic = ({ data }) => {
         <p>Įvertinimas: {data.ivertinimas}</p>
       </div>
       <div className="content">
-        <h1>{data.pavadinimas}</h1>
+        <h1
+          onClick={() => navigate(`/klausimas/${data.id}`)}
+          style={{cursor:'pointer'}}
+        >{data.pavadinimas}</h1>
         <p className="textarea">
           {
             data.aprasymas.length > 200
