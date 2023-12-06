@@ -56,11 +56,12 @@ const SingleQuestion = () => {
     question &&
     <StyledMain>
       <h1>{question.pavadinimas}</h1>
+      <i>{question.redaguota !== false ? `(Klausimas buvo redaguotas)` : null}</i>
       {
         loggedInUser.id === question.userId &&
         <>
           <button
-            onClick={() => navigate(`/klausimai/redaguoti/${id}`)}
+            onClick={() => navigate(`/klausimas/redaguoti/${id}`)}
           >Redaguoti</button>
           <button
             onClick={() => {

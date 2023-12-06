@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useContext } from "react";
+import CommentsContext from "../../contexts/CommentsContext";
 
 const StyledComments = styled.div`
   margin: 5px 0;
@@ -36,6 +38,9 @@ const StyledComments = styled.div`
 `;
 
 const Atsakymas = ({ data }) => {
+
+  const { setComments, CommentsActionTypes, comments } = useContext(CommentsContext);
+
   return (
     <StyledComments>
       <div className="rating">
@@ -46,6 +51,7 @@ const Atsakymas = ({ data }) => {
       <div className="comment">
         <div className="name">
           <p>{data.komentaras}</p>
+          <i>{data.redaguota !== false ? `(Atsakymas buvo redaguotas)` : null}</i>
         </div>
         <div>
           <p>Autorius: {data.autorius}</p>
@@ -53,7 +59,7 @@ const Atsakymas = ({ data }) => {
           <p>Balsų skaičius: {data.balsuSkaicius}</p>
         </div>
       </div>
-    </StyledComments>
+    </StyledComments >
   );
 }
 
