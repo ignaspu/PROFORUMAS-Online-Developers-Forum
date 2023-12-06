@@ -13,11 +13,21 @@ const StyledRegisterPage = styled.main`
   flex-direction: column;
   align-items: center;
   margin-bottom: 10px;
+  height: 69vh;
+  justify-content: center;
   > form{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    
+    border: 2px solid black;
+    padding: 30px;
+    background-color: #e2f4fa;
+    > button{
+      border: 0;
+      background-color: #c1bebe;
+      padding: 5px;
+      border-radius: 10px;
+    }
     > div{
       display: grid;
       grid-template-columns: 1fr 3fr;
@@ -118,10 +128,11 @@ const Register = () => {
           id: uuid(),
           vartotojoVardas: values.vartotojoVardas,
           email: values.email,
-          slaptazodis: bcrypt.hashSync(values.slaptazodis, 8),
+          slaptazodis: bcrypt.hashSync(values.slaptazodWis, 8),
           amzius: values.amzius,
           registracijosData: new Date().toISOString().slice(0, 10),
-          profilioNuotrauka: values.profilioNuotrauka
+          profilioNuotrauka: values.profilioNuotrauka,
+          likedIds: ''
         };
         setUsers({
           type: UsersActionTypes.add,

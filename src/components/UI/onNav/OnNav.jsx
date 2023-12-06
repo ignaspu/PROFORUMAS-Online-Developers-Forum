@@ -40,14 +40,13 @@ display: flex;
 const OnNav = () => {
 
   const { loggedInUser, setLoggedInUser } = useContext(UsersContext);
-  console.log(loggedInUser)
 
   return (
     <StyledNav>
       <ul>
-        <li>Pagrindinis</li>
+        <li><Link style={{textDecoration: 'none', color: 'black'}} to="/">Pagrindinis</Link></li>
         <li>Mėgstami klausimai</li>
-        <li>Užduoti klausimą</li>
+        <li><Link style={{textDecoration: 'none', color: 'black'}} to="/uzduotiklausima">Užduoti klausimą</Link></li>
         <li className="klausimai">Mano klausimai</li>
       </ul>
       <div className="profilis">

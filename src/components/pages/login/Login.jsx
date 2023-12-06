@@ -11,12 +11,21 @@ const StyledLoginPage = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  height: 70.5vh;
+  justify-content: center;
   > form{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    
+    border: 2px solid black;
+    padding: 30px;
+    background-color: #e2f4fa;
+    > button{
+      border: 0;
+      background-color: #c1bebe;
+      padding: 5px;
+      border-radius: 10px;
+    }
     > div{
       display: grid;
       grid-template-columns: 1fr 3fr;
@@ -80,7 +89,7 @@ const Login = () => {
           formik={formik}
           placeholder="Įveskite slaptažodį"
         />
-        <button type="submit">Login</button>
+        <button type="submit">Pirmyn!</button>
       </form>
       {
         failedToLogin && <p>Vartotojas su tokiu el. paštu ar slaptažodžiu nerastas</p>
