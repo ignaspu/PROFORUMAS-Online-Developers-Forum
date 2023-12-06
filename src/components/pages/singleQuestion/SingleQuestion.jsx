@@ -5,6 +5,7 @@ import UsersContext from "../../contexts/UsersContext";
 import TopicContext from "../../contexts/TopicContext";
 import { Link } from "react-router-dom";
 import Atsakymai from "../../UI/atsakymai/Atsakymai";
+import RasytiKomentara from "../../UI/rasytiKomentara/RasytiKomentara";
 
 const StyledMain = styled.main`
   width: 80%;
@@ -72,7 +73,7 @@ const SingleQuestion = () => {
       <p>{question.aprasymas}</p>
       <div>
         <div>
-          <Link className="linkas" to={question.nuotrauka !== "" ? question.nuotrauka : null } target="_blank"><img
+          <Link className="linkas" to={question.nuotrauka !== "" ? question.nuotrauka : null} target="_blank"><img
             src={question.nuotrauka !== "" ? question.nuotrauka : 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png'}
             alt={`${question.pavadinimas} poster`}
           /></Link>
@@ -87,7 +88,16 @@ const SingleQuestion = () => {
           <p>Žymos: {question.zymos.map(el => <> <span className="tagas">{el}</span></>)}</p>
         </div>
       </div>
-      <Atsakymai />
+      <h1>Atsakymai:</h1>
+      {
+        loggedInUser &&
+        <RasytiKomentara
+          questionId={question.id}
+        />
+      }
+      <Atsakymai
+        questionId={question.id}
+        />
     </StyledMain>
   );
 }

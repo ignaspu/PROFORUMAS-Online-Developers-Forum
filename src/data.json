@@ -72,6 +72,106 @@
       "autoriausId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
       "balsuSkaicius": 12,
       "ivertinimas": 8,
+      "publikuotas": "12/5/2023",
+      "redaguota": false
+    },
+    {
+      "id": "b722c610-d4ea-4e22-80ff-14ff04b0e80f",
+      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
+      "komentaras": "Teisinga informacija",
+      "autorius": "dingas",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": 1,
+      "redaguota": false
+    },
+    {
+      "id": "626568f8-0edc-4631-9ce6-972f774baf32",
+      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
+      "komentaras": "Aciu uz informacija",
+      "autorius": "dingas",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "6fa0c282-1eef-4f60-bb9b-26107c8e91e7",
+      "redaguota": false
+    },
+    {
+      "id": "3cd6c402-2c82-4fb9-8da5-1f23fab34ea6",
+      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
+      "komentaras": "Wow super!",
+      "autorius": "dingas",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": 1,
+      "redaguota": false
+    },
+    {
+      "id": "f0106e4a-f3ba-48b5-b61e-c5451acc3e12",
+      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
+      "komentaras": "Grazu",
+      "autorius": "dingas",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": 1,
+      "redaguota": false
+    },
+    {
+      "id": "dde67777-d643-43b2-9816-608af722b6c0",
+      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
+      "komentaras": "aciu jums",
+      "autorius": "dingas",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": 1,
+      "redaguota": false
+    },
+    {
+      "id": "5c5bea83-53a6-48f2-8451-fe188490fe83",
+      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
+      "komentaras": "Lorem as nice text thank you very muchLorem as",
+      "autorius": "dingas",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": 1,
+      "redaguota": false
+    },
+    {
+      "id": "1bca19ce-de6c-4eb5-89a0-e9c32a761da5",
+      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
+      "komentaras": " you very muchem as nice text thank you very muchs nice Lorem as nice text thank you very muchLorem as nice text thank you very muchtext thaLorem as nice text thank you very muchnk you very much",
+      "autorius": "dingas",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": 1,
+      "redaguota": false
+    },
+    {
+      "id": "ae7630be-250b-4156-9e9a-1512bcf5d7e1",
+      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
+      "komentaras": "Lorem as nice text thank you very muchLorem as nice text thank you very much",
+      "autorius": "dingas",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "6fa0c282-1eef-4f60-bb9b-26107c8e91e7",
+      "redaguota": false
+    },
+    {
+      "id": "1515e061-2640-4caa-8d03-b91d25ba8fa9",
+      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
+      "komentaras": "assaasdasd",
+      "autorius": "dingas",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": 1,
       "redaguota": false
     }
   ]
