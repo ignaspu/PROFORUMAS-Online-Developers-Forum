@@ -10,6 +10,21 @@ import RasytiKomentara from "../../UI/rasytiKomentara/RasytiKomentara";
 const StyledMain = styled.main`
   width: 80%;
   margin: 0 auto;
+  .rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    >span{
+      font-size: 2rem;
+    }
+    > p {
+      margin: 0;
+      > i{
+        font-size: 3rem;
+      }
+    }
+  }
   span.tagas{
     background-color: #dec4c4;
   }
@@ -45,17 +60,17 @@ const SingleQuestion = () => {
   const { setTopics, TopicActionTypes } = useContext(TopicContext);
   const { loggedInUser } = useContext(UsersContext);
 
-  
+
   useEffect(() => {
     fetch(`http://localhost:8080/topics/${id}`)
-    .then(res => res.json())
+      .then(res => res.json())
       .then(data => {
         if (!data.pavadinimas) {
           navigate('/');
         }
         setQuestion(data);
       })
-    }, []);
+  }, []);
 
   return (
     question &&
@@ -66,13 +81,13 @@ const SingleQuestion = () => {
         <div className="mygtukai">
           <button
             onClick={() => navigate(`/klausimas/redaguoti/${id}`)}
-            >Redaguoti</button>
+          >Redaguoti</button>
           <button
             onClick={() => {
               setTopics({ type: TopicActionTypes.remove, id: id });
               navigate("/");
             }}
-            >Ištrinti</button>
+          >Ištrinti</button>
         </div>
       }
       <p>{question.aprasymas}</p>
@@ -84,13 +99,16 @@ const SingleQuestion = () => {
             alt={`${question.pavadinimas} poster`}
           /></Link>
         </div>
+        <div className="rating">
+          <p><i class="bi bi-hand-thumbs-up"></i></p>
+          <span>{question.ivertinimas}</span>
+          <p><i class="bi bi-hand-thumbs-down"></i></p>
+        </div>
         <div>
-          <p>Publikuota: {question.publikuota}</p>
-          <p>Balsų skaičius: {question.balsuSkaicius}</p>
-          <p>Įsimintas: {question.isiminta}</p>
-          <p>Įvertinimas: {question.ivertinimas}</p>
           <p>Autorius: {question.autorius}</p>
-          <p>Ar klausimas atsakytas?: {question.atsakyta ? 'Atsakytas' : 'Neatsakytas'}</p>
+          <p>Publikuota: {question.publikuota}</p>
+          <p>Įsimintas: {question.isiminta}</p>
+          <p>Balsų skaičius: {question.balsuSkaicius}</p>
           <p>Žymos: {question.zymos.map(el => <> <span className="tagas">{el}</span></>)}</p>
         </div>
       </div>
@@ -103,7 +121,7 @@ const SingleQuestion = () => {
       }
       <Atsakymai
         questionId={question.id}
-        />
+      />
     </StyledMain>
   );
 }

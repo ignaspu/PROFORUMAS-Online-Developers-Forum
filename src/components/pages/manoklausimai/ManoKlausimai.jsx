@@ -4,11 +4,16 @@ import styled from 'styled-components';
 import UsersContext from '../../contexts/UsersContext';
 import { useState } from 'react';
 import Topic from "../../UI/topic/Topic";
+import { Link } from 'react-router-dom';
 
 const StyledManoKlausimai = styled.main`
   height: 67vh;
   > h1{
     text-align: center;
+  }
+  > div > h1{
+    text-align: center;
+    font-size: 1rem;
 }
 `;
 
@@ -30,7 +35,7 @@ const ManoKlausimai = () => {
               data={singlequestion}
             />
           }) :
-          <h1>Neturite užduotų klausimų</h1>
+          <h1>Neturite užduotų klausimų. <Link to="/uzduotiklausima">Spauskite čia</Link> norėdami sukurti klausimą</h1>
         }
       </div>
     </StyledManoKlausimai>

@@ -29,7 +29,7 @@ const RasytiKomentara = ({ questionId }) => {
   const validationSchema = Yup.object({
     komentaras: Yup.string()
       .min(5, 'Komentare mažiausiai 5 simboliai')
-      .max(200, 'Komentare daugiausiai 200 simbolių')
+      .max(600, 'Komentare daugiausiai 600 simbolių')
       .required('Laukas yra privalomas')
       .trim(),
   });

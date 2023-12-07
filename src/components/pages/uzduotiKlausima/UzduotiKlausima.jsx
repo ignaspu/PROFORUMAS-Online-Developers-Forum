@@ -84,7 +84,6 @@ const AddGame = () => {
         balsuSkaicius: 0,
         isiminta: 0,
         ivertinimas: 0,
-        atsakyta: false,
         redaguota: false
       };
       setTopics({

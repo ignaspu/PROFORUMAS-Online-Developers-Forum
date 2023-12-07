@@ -10,7 +10,7 @@ const StyledComments = styled.div`
   display: flex;
   padding: 5px 10px;
   gap: 30px;
-  justify-content: space-between;
+  justify-content: flex-start;
   > .rating {
     display: flex;
     flex-direction: column;
