@@ -11,12 +11,12 @@ const StyledMain = styled.main`
 
 const Topics = () => {
 
-  const { topics } = useContext(TopicContext);
+  const { filteredProductList } = useContext(TopicContext);
 
   return (
     <StyledMain>
       {
-        topics.map(singleTopic => {
+        filteredProductList.map(singleTopic => {
           return <Topic 
             key={singleTopic.id}
             data={singleTopic}

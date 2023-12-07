@@ -1,4 +1,5 @@
 import { createContext, useEffect, useReducer, useState } from "react";
+import { orderBy } from 'natural-orderby';
 import { sort } from "fast-sort";
 
 const TopicContext = createContext();
@@ -8,6 +9,9 @@ const TopicActionTypes = {
   remove: 'remove one specific topic',
   edit: 'edit one specific topic',
   keistiStatusa: 'pakeisti is neatsakyto i atsakyta',
+  neatsakyti: 'rodyti neatsakytus klausimus',
+  atsakyti: 'rodyti tik atsakytus klausimus',
+  visi: 'visi postai',
   naujausi: 'seniausi postai',
   seniausi: 'naujausi postai'
 };
@@ -63,6 +67,12 @@ const reducer = (state, action) => {
           return el;
         }
       });
+    case TopicActionTypes.neatsakyti:
+      return state.filter(topic => topic.atsakyta !== true)
+    case TopicActionTypes.atsakyti:
+      return state.filter(topic => topic.atsakyta === true)
+    case TopicActionTypes.visi:
+      return state.filter(topic => topic.id !== -55851);
     case TopicActionTypes.naujausi:
       const naujausi = sort(state).desc(u => u.publikuota);
       return naujausi;
@@ -78,23 +88,8 @@ const reducer = (state, action) => {
 const TopicProvider = ({ children }) => {
 
   const [topics, setTopics] = useReducer(reducer, []);
+
   const [isLiked, setIsLiked] = useState([]);
-
-  const [filterTextValue, updateFilterText] = useState('visi');
-
-  const filteredProductList = topics.filter((product) => {
-    if(filterTextValue === 'atsakyti'){
-      return product.atsakyta === true;
-    } else if(filterTextValue === 'neatsakyti'){
-      return product.atsakyta !== true;
-    } else {
-      return product;
-    }
-  })
-  
-  const onFilterValueSelection = (filterValue) => {
-    updateFilterText(filterValue)
-  }
 
   useEffect(() => {
     fetch(`http://localhost:8080/topics`)
@@ -112,9 +107,7 @@ const TopicProvider = ({ children }) => {
         setTopics,
         TopicActionTypes,
         isLiked,
-        setIsLiked,
-        onFilterValueSelection,
-        filteredProductList
+        setIsLiked
       }}
     >
       {children}

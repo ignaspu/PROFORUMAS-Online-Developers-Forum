@@ -58,7 +58,7 @@
       "isiminta": 0,
       "ivertinimas": 0,
       "redaguota": false,
-      "atsakyta": true,
+      "atsakyta": false,
       "kiekTuriKomentaru": 1
     },
     {
@@ -77,7 +77,7 @@
       "isiminta": 0,
       "ivertinimas": 0,
       "redaguota": false,
-      "atsakyta": true,
+      "atsakyta": false,
       "kiekTuriKomentaru": 1
     },
     {
@@ -95,7 +95,8 @@
       "balsuSkaicius": 0,
       "isiminta": 0,
       "ivertinimas": 0,
-      "redaguota": false
+      "redaguota": false,
+      "atsakyta": true
     },
     {
       "id": "21d199b3-d740-441c-aa63-1477c27a7604",
@@ -150,7 +151,7 @@
       "isiminta": 0,
       "ivertinimas": 0,
       "redaguota": false,
-      "atsakyta": true,
+      "atsakyta": false,
       "kiekTuriKomentaru": 1
     },
     {
@@ -192,17 +193,6 @@
   ],
   "comments": [
     {
-      "id": "87afa5f3-4312-41bc-9a97-7e6254bb0c0d",
-      "userId": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
-      "komentaras": "Gera informacija ,dekoju",
-      "autorius": "boxbox",
-      "publikuota": "12/7/2023",
-      "balsuSkaicius": 0,
-      "ivertinimas": 0,
-      "postId": "e142f22d-7371-43a0-a22f-764598344dbd",
-      "redaguota": false
-    },
-    {
       "id": "2d2118c0-e31a-41ee-81a3-efd3fb1eab12",
       "userId": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
       "komentaras": "Wow tikrai sito nezinojau :D",
@@ -233,6 +223,50 @@
       "balsuSkaicius": 0,
       "ivertinimas": 0,
       "postId": "ae347e63-84e2-4c56-82b7-2335a869f784",
+      "redaguota": false
+    },
+    {
+      "id": "19f5cd91-ef5e-4bfd-b06b-416def1295a1",
+      "userId": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
+      "komentaras": "Okay :DDDD",
+      "autorius": "boxbox",
+      "publikuota": "12/7/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "e142f22d-7371-43a0-a22f-764598344dbd",
+      "redaguota": false
+    },
+    {
+      "id": "0ae3c173-36b2-4ccb-aee3-d03bea9cdc0c",
+      "userId": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
+      "komentaras": "Woooow",
+      "autorius": "boxbox",
+      "publikuota": "12/7/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "0a28b412-50e3-4079-913f-4eeac1bd41f4",
+      "redaguota": false
+    },
+    {
+      "id": "c0a8e186-0e03-4cd3-8961-814bc4b06623",
+      "userId": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
+      "komentaras": "xDDDD",
+      "autorius": "boxbox",
+      "publikuota": "12/7/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "5fd216d3-103a-40ae-947a-dc226ef1bac6",
+      "redaguota": false
+    },
+    {
+      "id": "7d096370-ac96-4a93-bc86-713fce06dce7",
+      "userId": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
+      "komentaras": "aaaaaaa",
+      "autorius": "boxbox",
+      "publikuota": "12/7/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "0295b20d-8df2-4724-9404-5ecd61bd6b4e",
       "redaguota": false
     }
   ]

@@ -85,7 +85,6 @@ const AddGame = () => {
         ivertinimas: 0,
         redaguota: false,
         atsakyta: false,
-        kiekTuriKomentaru: 1
       };
       setTopics({
         type: TopicActionTypes.add,

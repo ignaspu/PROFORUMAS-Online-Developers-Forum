@@ -52,12 +52,8 @@ const RasytiKomentara = ({ questionId }) => {
         postId: questionId,
         redaguota: false
       };
-      // setTopics({
-      //   type: TopicActionTypes.keistiStatusa,
-      //   id: questionId
-      // });
       setTopics({
-        type: TopicActionTypes.komentaruPadidinti,
+        type: TopicActionTypes.keistiStatusa,
         id: questionId
       });
       setComments({

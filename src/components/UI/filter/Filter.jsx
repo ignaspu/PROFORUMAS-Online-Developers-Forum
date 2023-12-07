@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import TopicContext from "../../contexts/TopicContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import FilterProduct from "../filterproduct/FilterProduct";
 
 const StyledFilter = styled.div`
   display: flex;
@@ -28,25 +29,19 @@ const StyledFilter = styled.div`
 
 const Filter = () => {
 
-  const { TopicActionTypes, setTopics, topics } = useContext(TopicContext);
-
-  const naujausi = topics.slice().sort((a, b) => new Date(b.publikuota) - new Date(a.publikuota));
-  const seniausi = topics.slice().sort((a, b) => new Date(a.publikuota) - new Date(b.publikuota));
+  const { TopicActionTypes, setTopics, topics, onFilterValueSelection } = useContext(TopicContext);
 
   return (
     <>
       <StyledFilter>
         <div>
           <h1>Filtravimas:</h1>
-          <button onClick={() => setTopics({ type: TopicActionTypes.neatsakyti})}>Rodyti neatsakytus</button>
-          <button onClick={() => setTopics({ type: TopicActionTypes.atsakyti})}>Rodyti atsakytus</button>
-          <button onClick={() => window.location.reload(false)}>Rodyti visus</button>
+          <FilterProduct filterValueSelected={onFilterValueSelection} />
         </div>
         <div>
           <h1>Rikiavimas (pagal data):</h1>
           <button onClick={() => setTopics({ type: TopicActionTypes.naujausi})}>Nuo naujausių</button>
           <button onClick={() => setTopics({ type: TopicActionTypes.seniausi})}>Nuo seniausių</button>
-
         </div>
       </StyledFilter>
     </>

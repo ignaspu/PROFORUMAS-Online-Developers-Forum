@@ -74,10 +74,6 @@ const Atsakymas = ({ data }) => {
           <button
             onClick={() => {
               setComments({ type: CommentsActionTypes.remove, id: data.id });
-              setTopics({
-                type: TopicActionTypes.komentaruSumazinti,
-                id: data.postId
-              });
             }}>Ištrinti</button>
         </div>
       }
