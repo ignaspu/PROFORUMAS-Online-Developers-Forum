@@ -1,46 +1,117 @@
 import { createContext, useEffect, useReducer, useState } from "react";
+import { orderBy } from 'natural-orderby';
+import { sort } from "fast-sort";
 
 const TopicContext = createContext();
 const TopicActionTypes = {
   get_all: 'get all topics from db',
   add: 'add one new topic',
   remove: 'remove one specific topic',
-  edit: 'edit one specific topic'
+  edit: 'edit one specific topic',
+  keistiStatusa: 'pakeisti is neatsakyto i atsakyta',
+  neatsakyti: 'rodyti neatsakytus klausimus',
+  atsakyti: 'rodyti tik atsakytus klausimus',
+  komentaruPadidinti: 'padidinti komentaru skaiciu',
+  komentaruSumazinti: 'sumazinti komentaru skaiciu'
 };
 
 const reducer = (state, action) => {
-  switch(action.type){
+  switch (action.type) {
     case TopicActionTypes.get_all:
       return action.data;
     case TopicActionTypes.add:
       fetch(`http://localhost:8080/topics`, {
         method: "POST",
-        headers:{
-          "Content-Type":"application/json"
+        headers: {
+          "Content-Type": "application/json"
         },
         body: JSON.stringify(action.data)
       });
       return [...state, action.data];
     case TopicActionTypes.remove:
-      fetch(`http://localhost:8080/topics/${action.id}`,{
+      fetch(`http://localhost:8080/topics/${action.id}`, {
         method: "DELETE"
       });
       return state.filter(el => el.id.toString() !== action.id.toString());
     case TopicActionTypes.edit:
       fetch(`http://localhost:8080/topics/${action.id}`, {
         method: "PUT",
-        headers:{
-          "Content-Type":"application/json"
+        headers: {
+          "Content-Type": "application/json"
         },
         body: JSON.stringify(action.data)
       });
       return state.map(el => {
-        if(el.id.toString() === action.id.toString()){
-          return { id:action.id, ...action.data };
+        if (el.id.toString() === action.id.toString()) {
+          return { id: action.id, ...action.data };
         } else {
           return el;
         }
       });
+    case TopicActionTypes.keistiStatusa:
+      return state.map(el => {
+        if (el.id === action.id) {
+          fetch(`http://localhost:8080/topics/${action.id}`, {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ atsakyta: !el.atsakyta })
+          })
+          return {
+            ...el,
+            atsakyta: !el.atsakyta
+          }
+        } else {
+          return el;
+        }
+      });
+    case TopicActionTypes.komentaruPadidinti:
+      return state.map(el => {
+        if (el.id === action.id) {
+          fetch(`http://localhost:8080/topics/${action.id}`, {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ kiekTuriKomentaru: el.kiekTuriKomentaru+1 })
+          })
+          return {
+            ...el,
+            kiekTuriKomentaru: el.kiekTuriKomentaru+1
+          }
+        } else {
+          return el;
+        }
+      });
+    case TopicActionTypes.komentaruSumazinti:
+      return state.map(el => {
+        if (el.id === action.id) {
+          fetch(`http://localhost:8080/topics/${action.id}`, {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ kiekTuriKomentaru: el.kiekTuriKomentaru-1 })
+          })
+          return {
+            ...el,
+            kiekTuriKomentaru: el.kiekTuriKomentaru-1
+          }
+        } else {
+          return el;
+        }
+      });
+    case TopicActionTypes.neatsakyti:
+      return state.filter(topic => topic.atsakyta !== true)
+    case TopicActionTypes.atsakyti:
+      return state.filter(topic => topic.atsakyta === true)
+    case TopicActionTypes.naujausi:
+      const naujausi = sort(state).desc(u => u.publikuota);
+      return naujausi;
+    case TopicActionTypes.seniausi:
+      const seniausi = sort(state).asc(u => u.publikuota);
+      return seniausi;
     default:
       console.log("error: action type not found", action.type);
       return state;
@@ -68,11 +139,11 @@ const TopicProvider = ({ children }) => {
         topics,
         setTopics,
         TopicActionTypes,
-        isLiked, 
+        isLiked,
         setIsLiked
       }}
     >
-      { children }
+      {children}
     </TopicContext.Provider>
   );
 }

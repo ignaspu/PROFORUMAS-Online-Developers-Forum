@@ -3,6 +3,7 @@ import { useContext } from "react";
 import UsersContext from "../../contexts/UsersContext";
 import CommentsContext from "../../contexts/CommentsContext";
 import RedaguotiKomentara from "../redaguotiKomentara/RedaguotiKomentara";
+import TopicContext from "../../contexts/TopicContext";
 
 const StyledComments = styled.div`
   margin: 5px 0;
@@ -44,6 +45,7 @@ const Atsakymas = ({ data }) => {
 
   const { loggedInUser } = useContext(UsersContext);
   const { setComments, CommentsActionTypes, setArRedaguota, arRedaguota } = useContext(CommentsContext);
+  const { setTopics, TopicActionTypes } = useContext(TopicContext);
 
   return (
     <StyledComments>
@@ -67,17 +69,22 @@ const Atsakymas = ({ data }) => {
         loggedInUser.id === data.userId &&
         <div>
           <button
-            onClick={() => setArRedaguota({id: data.id})}
+            onClick={() => setArRedaguota({ id: data.id })}
           >Redaguoti</button>
           <button
-            onClick={() => setComments({ type: CommentsActionTypes.remove, id: data.id })}
-          >Ištrinti</button>
+            onClick={() => {
+              setComments({ type: CommentsActionTypes.remove, id: data.id });
+              setTopics({
+                type: TopicActionTypes.komentaruSumazinti,
+                id: data.postId
+              });
+            }}>Ištrinti</button>
         </div>
       }
       {
         arRedaguota.id === data.id &&
         <RedaguotiKomentara
-        id={data.id}
+          id={data.id}
         />
       }
     </StyledComments >

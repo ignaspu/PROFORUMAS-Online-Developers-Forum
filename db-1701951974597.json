@@ -187,7 +187,7 @@
       "ivertinimas": 0,
       "redaguota": false,
       "atsakyta": false,
-      "kiekTuriKomentaru": 2
+      "kiekTuriKomentaru": 1
     }
   ],
   "comments": [
@@ -222,17 +222,6 @@
       "balsuSkaicius": 0,
       "ivertinimas": 0,
       "postId": "0a28b412-50e3-4079-913f-4eeac1bd41f4",
-      "redaguota": false
-    },
-    {
-      "id": "b7f0761b-196e-4eaa-9233-1b9cdc890ca9",
-      "userId": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
-      "komentaras": "json serveris",
-      "autorius": "boxbox",
-      "publikuota": "12/7/2023",
-      "balsuSkaicius": 0,
-      "ivertinimas": 0,
-      "postId": "ae347e63-84e2-4c56-82b7-2335a869f784",
       "redaguota": false
     }
   ]
