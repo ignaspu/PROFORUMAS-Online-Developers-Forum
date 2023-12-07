@@ -5,9 +5,7 @@ const CommentsActionTypes = {
   get_all: 'get all topics from db',
   add: 'add one new topic',
   remove: 'remove one specific topic',
-  edit: 'edit one specific topic',
-  voteUp: 'vote up for comment',
-  voteDown: 'vote dwon for comment'
+  edit: 'edit one specific topic'
 };
 
 const reducer = (state, action) => {
@@ -43,42 +41,8 @@ const reducer = (state, action) => {
           return el;
         }
       });
-    case CommentsActionTypes.voteUp:
-      // fetch(`http://localhost:8080/comments/${action.id}`, {
-      //   method: "PATCH",
-      //   headers: {
-      //     "Content-Type": "application/json"
-      //   },
-      //   body: JSON.stringify({ ...state, ...action.data })
-      // });
-      fetch(`http://localhost:8080/comments/${action.id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(action.data)
-      });
-      return state.map(el => {
-        if (el.id.toString() === action.id.toString()) {
-          return { id: action.id, ...action.data };
-        } else {
-          return el;
-        }
-      });
-      case CommentsActionTypes.voteDown:
-        fetch(`http://localhost:8080/comments/${action.id}`, {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({ ...state, ...action.data })
-        });
-        return {
-          id: action.id,
-          ...action.data
-        }
     default:
-      console.log("error: action type not found", action.type);
+      console.log("klaida: toks veiksmas nerastas", action.type);
       return state;
   }
 }
@@ -86,6 +50,7 @@ const reducer = (state, action) => {
 const CommentsProvider = ({ children }) => {
 
   const [comments, setComments] = useReducer(reducer, []);
+  const [arRedaguota, setArRedaguota] = useState({id: ''});
 
   const [isLiked, setIsLiked] = useState([]);
 
@@ -105,7 +70,9 @@ const CommentsProvider = ({ children }) => {
         setComments,
         CommentsActionTypes,
         isLiked,
-        setIsLiked
+        setIsLiked,
+        arRedaguota, 
+        setArRedaguota
       }}
     >
       {children}

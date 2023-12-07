@@ -1,136 +1,209 @@
 {
   "users": [
     {
-      "id": 1,
-      "userName": "admin",
-      "email": "lol@lol.lt",
-      "password": "pass",
-      "age": 24,
-      "profilePicture": "https://google.lt",
-      "likedIds": [
-        "1"
-      ]
+      "id": "98dc9121-f889-4411-8694-b83367b69163",
+      "vartotojoVardas": "mouse55",
+      "email": "jonas@gmail.com",
+      "slaptazodis": "$2a$08$qjnPLG3vZX75c0fstl1yee3dZPYHdw8sf0xGwdXqmUw6l9Dtq805u",
+      "amzius": 15,
+      "registracijosData": "2023-12-06",
+      "profilioNuotrauka": "https://thinksport.com.au/wp-content/uploads/2020/01/avatar-.jpg",
+      "likedIds": ""
     },
     {
-      "id": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
-      "vartotojoVardas": "dingas",
-      "email": "asd@ads.tt",
-      "slaptazodis": "$2a$08$ZKJWzeY.yOxyL9OPnSbJIONkRwN1p1vYT8AC2l9RUE05DDQNmUTUG",
-      "amzius": 15,
-      "registracijosData": "2023-12-04",
-      "profilioNuotrauka": "https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg",
-      "likedIds": [
-        "1"
-      ]
+      "id": "03f83a1a-59ad-457a-8ff2-f6bef439696e",
+      "vartotojoVardas": "andrius",
+      "email": "andrius@gmail.com",
+      "slaptazodis": "$2a$08$lyYjqJaOUE3tnEkW8nqeauyNlUqoab75lNKVO139/1Wq7saG9Q52m",
+      "amzius": 22,
+      "registracijosData": "2023-12-06",
+      "profilioNuotrauka": "https://thinksport.com.au/wp-content/uploads/2020/01/avatar-.jpg",
+      "likedIds": ""
+    },
+    {
+      "id": "886c263b-767b-4f54-a108-98d777bfdf30",
+      "vartotojoVardas": "black_monkey",
+      "email": "monkey@gmail.com",
+      "slaptazodis": "$2a$08$P6xQQsvETvAYrzeEQ0mNu.12wmaDL1nSOGCtfxko.5vgC1HmXQVc.",
+      "amzius": 41,
+      "registracijosData": "2023-12-06",
+      "profilioNuotrauka": "https://thinksport.com.au/wp-content/uploads/2020/01/avatar-.jpg",
+      "likedIds": ""
+    },
+    {
+      "id": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
+      "vartotojoVardas": "boxbox",
+      "email": "john@bee.lt",
+      "slaptazodis": "$2a$08$n/c93IJCYLzGsZnvbNxsueZ26EPPj3jTBY9Ebz1FQ5nvZq9Oh5GTO",
+      "amzius": 23,
+      "registracijosData": "2023-12-07",
+      "profilioNuotrauka": "https://thinksport.com.au/wp-content/uploads/2020/01/avatar-.jpg",
+      "likedIds": ""
     }
   ],
   "topics": [
     {
-      "id": 1,
-      "pavadinimas": "Kaip sukurti ToDo aplikacija naudojant React?",
-      "aprasymas": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam libero saepe consequuntur ab obcaecati ipsam, perferendis dolore iure in placeat unde magni eaque delectus doloribus quasi vitae, distinctio vel! Architecto",
-      "autorius": "mouse558",
-      "publikuota": "2023-01-02",
-      "balsuSkaicius": 12,
-      "isiminta": 2,
-      "ivertinimas": 8,
-      "nuotrauka": "",
-      "userId": 1,
+      "id": "e142f22d-7371-43a0-a22f-764598344dbd",
+      "userId": "98dc9121-f889-4411-8694-b83367b69163",
+      "pavadinimas": "Klausimai programuotojams darbo pokalbio metu",
+      "aprasymas": "Praziurejau visas temas bet nieko panasaus neradau :) taigi, i kokius klausimus yra teke atsakineti pretenduojant i programuotojo pozicija imoneje? Butu idomu suzinoti tarkim i junior developer vieta? O gal patiems yra atrinkti kandidatus? Ta prasme + - ko yra tikimasi is tik ka atejusio i nauja imone. Is anksto dekoju uz atsakymus.",
       "zymos": [
-        "zyma",
-        "Antra"
+        "klausimai",
+        " darbo pokalbis"
       ],
-      "atsakyta": false,
+      "nuotrauka": "",
+      "autorius": "mouse55",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "isiminta": 0,
+      "ivertinimas": 0,
       "redaguota": false
     },
     {
-      "id": "6fa0c282-1eef-4f60-bb9b-26107c8e91e7",
-      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
-      "pavadinimas": "Remove old resources on Cloudinary",
-      "aprasymas": "I'm trying to use CloudinaryDotNet (Cloudinary .NET SDK) to delete resources that has a created date older than a specific date and has a specific prefix (the beginning of a public id if I understand things correctly). I haven't found any really good way of doing this.  So far I have come up with a solution where I have to list all the resources 500 at a time, since that is the maximum of resources returned by the method ListResources. When I have gathered the public ids of the resources I want removed I delete them using the method DeleteResources.",
+      "id": "0a28b412-50e3-4079-913f-4eeac1bd41f4",
+      "userId": "03f83a1a-59ad-457a-8ff2-f6bef439696e",
+      "pavadinimas": "LT keiksmazodziai",
+      "aprasymas": "Ieskau dazniausiai naudojamu lietuvisku (su rusisku prieskoniu aisku) keiksmazodziu saraso. JSON, SQL ar tiesiog .txt. Gal kas turite ar matet?",
       "zymos": [
-        "help",
-        "me",
-        "i dont know :("
-      ],
-      "nuotrauka": "https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg",
-      "publikuota": "12/5/2023",
-      "balsuSkaicius": 0,
-      "isiminta": 0,
-      "ivertinimas": 0,
-      "autorius": "dingas",
-      "atsakyta": false,
-      "redaguota": true
-    },
-    {
-      "id": "a0b5106b-9598-4d78-b902-9a086272d0d5",
-      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
-      "pavadinimas": "Kaip pakeisti srifta?",
-      "aprasymas": "Kaip pakeisti srifta per CSS?",
-      "zymos": [
-        "font",
-        "sriftas",
-        "csss"
+        "keiksmazodziai",
+        " json"
       ],
       "nuotrauka": "",
-      "autorius": "dingas",
+      "autorius": "andrius",
       "publikuota": "12/6/2023",
       "balsuSkaicius": 0,
       "isiminta": 0,
       "ivertinimas": 0,
-      "atsakyta": false,
-      "redaguota": true
+      "redaguota": false
     },
     {
-      "id": "4e8596f8-d06b-4f03-8d31-b4401925a4ca",
-      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
-      "pavadinimas": "Kaip vaziuoti dviraciu????",
-      "aprasymas": "turiu dvirati bet nzn kaip vaziuoti. Padeeeekit ",
+      "id": "5fd216d3-103a-40ae-947a-dc226ef1bac6",
+      "userId": "03f83a1a-59ad-457a-8ff2-f6bef439696e",
+      "pavadinimas": "Ieškau kas galėtu sutvarkyti svetainė (Wordpress)",
+      "aprasymas": "Ieškau kas galėtu sutvarkyti svetainėje esančias problemas:  1. Kai kurie svetainės elementai blogai atvaizduojami telefone  2 Child tema. Ji kaip ir yra, tačiau atnaujinus svetainės temą, dingsta visi vertimai, taoi įtariu, kad problema su Child tema.  3. CSS smulkus darbelis su produkto pavadinimų atvaizdavimu  4. Siunčiant laiškus iš el. pašto, kažkodėl jį traktuoja kaip SPAM, ko pasekoje paskyra buvo suspenduota. Reiktu sutvarkyti šitą  5. Patikrinti ir sutvarkyti kita galimas klaidas.",
       "zymos": [
-        "dviratiss"
+        "wordpress",
+        " programavimas"
       ],
       "nuotrauka": "",
-      "autorius": "dingas",
+      "autorius": "andrius",
       "publikuota": "12/6/2023",
       "balsuSkaicius": 0,
       "isiminta": 0,
       "ivertinimas": 0,
-      "atsakyta": false,
-      "redaguota": true
+      "redaguota": false
+    },
+    {
+      "id": "21d199b3-d740-441c-aa63-1477c27a7604",
+      "userId": "886c263b-767b-4f54-a108-98d777bfdf30",
+      "pavadinimas": " kur mokintis programuoti?",
+      "aprasymas": "Gal kas gali pasiulyti kur mokintis programuoti?",
+      "zymos": [
+        "PROGRMAVIMAS",
+        " mokintis"
+      ],
+      "nuotrauka": "",
+      "autorius": "black_monkey",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "isiminta": 0,
+      "ivertinimas": 0,
+      "redaguota": false
+    },
+    {
+      "id": "6f4ec9db-eb9e-414a-966d-d7ab426f4908",
+      "userId": "886c263b-767b-4f54-a108-98d777bfdf30",
+      "pavadinimas": "kokia programavimo kalba pasirinkti?",
+      "aprasymas": "Galvoju ir vis nesugalvoju, kokią programvimo kalbą turėčiau pasirinkti? Kažkaip mąstau apie Javascript. Ar lengva išmokti?",
+      "zymos": [
+        "js",
+        " programavimas"
+      ],
+      "nuotrauka": "https://www.lrt.lt/img/2019/12/02/560399-339184-1287x836.jpg",
+      "autorius": "black_monkey",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "isiminta": 0,
+      "ivertinimas": 0,
+      "redaguota": false
     }
   ],
   "comments": [
     {
-      "id": "73430137-c4b9-4404-9600-7a6a798fa661",
-      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
-      "komentaras": "Grazu",
-      "autorius": "dingas",
-      "publikuota": "12/6/2023",
-      "balsuSkaicius": 0,
-      "ivertinimas": 1,
-      "postId": 1,
-      "redaguota": false
-    },
-    {
-      "id": "660ab111-6364-4d0f-9759-1eeb78b60f93",
-      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
-      "komentaras": "Reikia prideti p { font-family: 'Roboto' }",
-      "autorius": "dingas",
+      "id": "666a0d64-f0d4-4dc5-997d-2eb0300cedd9",
+      "userId": "03f83a1a-59ad-457a-8ff2-f6bef439696e",
+      "komentaras": "Iš tikro labai įvairūs klausimai gali būti, pradedant tuo, ko tikiesi dirbdamas pas juos ir baigiant tuo, kad užduodamas loginis klausimas, į kurį turi atsakyti su užsidegimu ir noru išspręsti tą bėdą :)",
+      "autorius": "andrius",
       "publikuota": "12/6/2023",
       "balsuSkaicius": 0,
       "ivertinimas": 0,
-      "postId": "a0b5106b-9598-4d78-b902-9a086272d0d5",
+      "postId": "e142f22d-7371-43a0-a22f-764598344dbd",
       "redaguota": false
     },
     {
-      "id": "093a8f57-9d50-4b9f-b800-6a362346719a",
-      "userId": "103b8cad-a750-4ff0-a7e6-eaf73d2b06a5",
-      "komentaras": "Nice wow",
-      "autorius": "dingas",
+      "id": "1d6a6236-3bfc-4ff0-ad23-dba9318e50a4",
+      "userId": "03f83a1a-59ad-457a-8ff2-f6bef439696e",
+      "komentaras": "Čia gali būti neblogas sąrašiukas, tik reiks pasitaisyt rašybą kai kurių https://www.scribd.com/doc/136875125/Lithuanian-Insults",
+      "autorius": "andrius",
       "publikuota": "12/6/2023",
       "balsuSkaicius": 0,
       "ivertinimas": 0,
-      "postId": "4e8596f8-d06b-4f03-8d31-b4401925a4ca",
+      "postId": "0a28b412-50e3-4079-913f-4eeac1bd41f4",
+      "redaguota": false
+    },
+    {
+      "id": "0190a016-6996-416d-acf6-4dd13770cb8f",
+      "userId": "886c263b-767b-4f54-a108-98d777bfdf30",
+      "komentaras": "Galiu, parasyk man i fb: Mykolas Dzordanas",
+      "autorius": "black_monkey",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "5fd216d3-103a-40ae-947a-dc226ef1bac6",
+      "redaguota": false
+    },
+    {
+      "id": "8a8ff72e-8488-4ced-8796-5f4da9ab90d9",
+      "userId": "886c263b-767b-4f54-a108-98d777bfdf30",
+      "komentaras": "Ir as ieskau, gal kas turi??",
+      "autorius": "black_monkey",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "0a28b412-50e3-4079-913f-4eeac1bd41f4",
+      "redaguota": false
+    },
+    {
+      "id": "25c0d736-2ee8-490e-97d5-e1ef78e24580",
+      "userId": "886c263b-767b-4f54-a108-98d777bfdf30",
+      "komentaras": "Man uzduotis duoda, kurias reikia isspresti",
+      "autorius": "black_monkey",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "e142f22d-7371-43a0-a22f-764598344dbd",
+      "redaguota": true
+    },
+    {
+      "id": "dfcd056d-2b55-4560-af26-3abbb2ec306c",
+      "userId": "886c263b-767b-4f54-a108-98d777bfdf30",
+      "komentaras": "draugas sake isbandyti CodeAcademy :D",
+      "autorius": "black_monkey",
+      "publikuota": "12/6/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "21d199b3-d740-441c-aa63-1477c27a7604",
+      "redaguota": false
+    },
+    {
+      "id": "edf1f5de-0295-4375-9cae-901960079446",
+      "userId": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
+      "komentaras": "Ir man idomu! seku sia tema...",
+      "autorius": "boxbox",
+      "publikuota": "12/7/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "e142f22d-7371-43a0-a22f-764598344dbd",
       "redaguota": false
     }
   ]

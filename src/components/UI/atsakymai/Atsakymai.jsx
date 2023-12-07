@@ -44,13 +44,3 @@ const Atsakymai = ({ questionId }) => {
 }
 
 export default Atsakymai;
-// comments.map(comment => {
-//   if (questionId === comment.postId) {
-//     return <Atsakymas
-//       data={comment}
-//       key={comment.id}
-//     />
-//   } else {
-//     return <p className="noComments">Nėra atsakymų. Būkite pirmas ir parašykite!</p>
-//   }
-// })

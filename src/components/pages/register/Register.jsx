@@ -83,7 +83,6 @@ const Register = () => {
       .required('Būtinai užpildykite lauką'),
     profilioNuotrauka: Yup.string()
       .url('Privalo būti tinkamas URL adresas')
-      .required('Būtinai užpildykite lauką')
       .trim()
   });
 
@@ -128,10 +127,10 @@ const Register = () => {
           id: uuid(),
           vartotojoVardas: values.vartotojoVardas,
           email: values.email,
-          slaptazodis: bcrypt.hashSync(values.slaptazodWis, 8),
+          slaptazodis: bcrypt.hashSync(values.slaptazodis, 8),
           amzius: values.amzius,
           registracijosData: new Date().toISOString().slice(0, 10),
-          profilioNuotrauka: values.profilioNuotrauka,
+          profilioNuotrauka: values.profilioNuotrauka ? values.profilioNuotrauka : 'https://thinksport.com.au/wp-content/uploads/2020/01/avatar-.jpg',
           likedIds: ''
         };
         setUsers({
