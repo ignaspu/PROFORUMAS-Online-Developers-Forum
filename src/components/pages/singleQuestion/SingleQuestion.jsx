@@ -14,14 +14,14 @@ const StyledMain = styled.main`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     >span{
       font-size: 2rem;
     }
     > p {
       margin: 0;
       > i{
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
     }
   }
@@ -57,9 +57,8 @@ const SingleQuestion = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [question, setQuestion] = useState('');
-  const { setTopics, TopicActionTypes } = useContext(TopicContext);
+  const { setTopics, TopicActionTypes, topics } = useContext(TopicContext);
   const { loggedInUser } = useContext(UsersContext);
-
 
   useEffect(() => {
     fetch(`http://localhost:8080/topics/${id}`)
@@ -99,17 +98,38 @@ const SingleQuestion = () => {
             alt={`${question.pavadinimas} poster`}
           /></Link>
         </div>
-        <div className="rating">
-          <p><i class="bi bi-hand-thumbs-up"></i></p>
-          <span>{question.ivertinimas}</span>
-          <p><i class="bi bi-hand-thumbs-down"></i></p>
-        </div>
-        <div>
-          <p>Autorius: {question.autorius}</p>
-          <p>Publikuota: {question.publikuota}</p>
-          <p>Įsimintas: {question.isiminta}</p>
-          <p>Balsų skaičius: {question.balsuSkaicius}</p>
-          <p>Žymos: {question.zymos.map(el => <> <span className="tagas">{el}</span></>)}</p>
+        <div className="ratingAndInfo">
+          <div className="rating">
+            {
+              loggedInUser &&
+              <p><i
+                onClick={() => {
+                  setTopics({
+                    type: TopicActionTypes.patinka,
+                    id: question.id
+                  })
+                }}
+                className="bi bi-hand-thumbs-up"></i></p>
+            }
+            <span>{topics.find(element => element.id === id).ivertinimas}</span>
+            <p>Įvertinimas</p>
+            {
+              loggedInUser &&
+              <p><i
+                onClick={() => {
+                  setTopics({
+                    type: TopicActionTypes.nepatinka,
+                    id: question.id
+                  })
+                }}
+                className="bi bi-hand-thumbs-down"></i></p>
+            }
+          </div>
+          <div>
+            <p>Autorius: {question.autorius}</p>
+            <p>Publikuota: {question.publikuota}</p>
+            <p>Žymos: {question.zymos.map(el => <> <span className="tagas">{el}</span></>)}</p>
+          </div>
         </div>
       </div>
       <h1>Atsakymai:</h1>

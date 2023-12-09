@@ -9,6 +9,7 @@ import UzduotiKlausima from './components/pages/uzduotiKlausima/UzduotiKlausima'
 import ManoKlausimai from './components/pages/manoklausimai/ManoKlausimai';
 import SingleQuestion from './components/pages/singleQuestion/SingleQuestion';
 import RedaguotiKlausima from './components/pages/redaguotiKlausima/RedaguotiKlausima';
+import ApieMus from './components/pages/apieMus/ApieMus';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="prisijungti" element={<Login />} />
         <Route path="uzduotiklausima" element={<UzduotiKlausima />} />
         <Route path="manoklausimai" element={<ManoKlausimai />} />
+        <Route path="apie" element={<ApieMus />}/>
         <Route path="/klausimas">
           <Route path=":id" element={<SingleQuestion />} />
           <Route path="redaguoti/:id" element={<RedaguotiKlausima />} />

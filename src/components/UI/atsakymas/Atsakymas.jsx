@@ -44,15 +44,35 @@ const StyledComments = styled.div`
 const Atsakymas = ({ data }) => {
 
   const { loggedInUser } = useContext(UsersContext);
-  const { setComments, CommentsActionTypes, setArRedaguota, arRedaguota } = useContext(CommentsContext);
-  const { setTopics, TopicActionTypes } = useContext(TopicContext);
+  const { setComments, CommentsActionTypes, setArRedaguota, arRedaguota, comments } = useContext(CommentsContext);
 
   return (
     <StyledComments>
       <div className="rating">
-        <p><i class="bi bi-hand-thumbs-up"></i></p>
+        {
+          loggedInUser &&
+          <p><i
+            onClick={() => {
+              setComments({
+                type: CommentsActionTypes.like,
+                id: data.id
+              })
+            }}
+            className="bi bi-hand-thumbs-up"></i></p>
+        }
         <span>{data.ivertinimas}</span>
-        <p><i class="bi bi-hand-thumbs-down"></i></p>
+        <p>Įvertinimas</p>
+        {
+          loggedInUser &&
+          <p><i
+            onClick={() => {
+              setComments({
+                type: CommentsActionTypes.dislike,
+                id: data.id
+              })
+            }}
+            className="bi bi-hand-thumbs-down"></i></p>
+        }
       </div>
       <div className="comment">
         <div className="name">
@@ -62,7 +82,6 @@ const Atsakymas = ({ data }) => {
         <div>
           <p>Autorius: {data.autorius}</p>
           <p>Publikuotas: {data.publikuota}</p>
-          <p>Balsų skaičius: {data.balsuSkaicius}</p>
         </div>
       </div>
       {

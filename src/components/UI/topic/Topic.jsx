@@ -8,6 +8,9 @@ const StyledDiv = styled.div`
   justify-content: space-between;
   padding: 5px 10px;
   align-items: center;
+  > div{
+    width: 300px;
+  }
   div p:not(.textarea){
     margin: 5px;
   }
@@ -33,14 +36,13 @@ const Topic = ({ data }) => {
   return (
     <StyledDiv>
       <div>
-        <p>Balsų skaičius: {data.balsuSkaicius}</p>
-        <p>Įsimintas: {data.isiminta} kartus</p>
+        <p>Žymos: {data.zymos.map(el => <> <span style={{backgroundColor: '#dec4c4'}} className="tagas">{el}</span></>)}</p>
         <p>Įvertinimas: {data.ivertinimas}</p>
       </div>
       <div className="content">
         <h1
           onClick={() => navigate(`/klausimas/${data.id}`)}
-          style={{cursor:'pointer'}}
+          style={{ cursor: 'pointer' }}
         >{data.pavadinimas}</h1>
         <p className="textarea">
           {

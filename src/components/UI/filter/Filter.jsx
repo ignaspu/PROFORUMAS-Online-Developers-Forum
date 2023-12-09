@@ -13,6 +13,11 @@ const StyledFilter = styled.div`
     display: inline-block;
     font-weight: 400;
   }
+  > div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
   > div > button{
     font-size: 0.75rem;
     margin: 3px;

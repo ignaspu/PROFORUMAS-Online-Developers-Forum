@@ -13,6 +13,16 @@ display: flex;
     > img{
       width: 50px;
       height: auto;
+      border-radius: 50%;
+    }
+    > button{
+      border: 0;
+      background-color: #D1D2D1;
+      border-radius: 10px;
+      padding: 3px 10px;
+    }
+    > button:hover{
+      cursor: pointer;
     }
   }
   > ul{
@@ -45,13 +55,13 @@ const OnNav = () => {
     <StyledNav>
       <ul>
         <li><Link style={{textDecoration: 'none', color: 'black'}} to="/">Pagrindinis</Link></li>
-        <li>Mėgstami klausimai</li>
+        <li><Link style={{textDecoration: 'none', color: 'black'}} to="/apie">Apie forumą</Link></li>
         <li><Link style={{textDecoration: 'none', color: 'black'}} to="/uzduotiklausima">Užduoti klausimą</Link></li>
         <li><Link style={{textDecoration: 'none', color: 'black'}} to="/manoklausimai">Mano klausimai</Link></li>
       </ul>
       <div className="profilis">
-        <img src={loggedInUser.profilioNuotrauka} alt="profilio nuotrauka" />
-        <p>{loggedInUser.vartotojoVardas}</p>
+        <img style={{ padding: '0px 20px' }} src={loggedInUser.profilioNuotrauka} alt="profilio nuotrauka" />
+        <p>Sveiki, {loggedInUser.vartotojoVardas}</p>
         <button onClick={() => setLoggedInUser(false)}>Atsijungti</button>
       </div>
     </StyledNav>

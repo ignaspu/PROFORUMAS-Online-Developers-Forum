@@ -9,7 +9,9 @@ const TopicActionTypes = {
   edit: 'edit one specific topic',
   keistiStatusa: 'pakeisti is neatsakyto i atsakyta',
   naujausi: 'seniausi postai',
-  seniausi: 'naujausi postai'
+  seniausi: 'naujausi postai',
+  patinka: 'ivertinti teigiamai posta',
+  nepatinka: 'ivertinti neigiamai posta'
 };
 
 const reducer = (state, action) => {
@@ -53,16 +55,52 @@ const reducer = (state, action) => {
             headers: {
               "Content-Type": "application/json"
             },
-            body: JSON.stringify({ atsakyta: !el.atsakyta })
+            body: JSON.stringify({ atsakyta: true })
           })
           return {
             ...el,
-            atsakyta: !el.atsakyta
+            atsakyta: true
           }
         } else {
           return el;
         }
       });
+    case TopicActionTypes.patinka:
+      return state.map(el => {
+        if (el.id === action.id) {
+          fetch(`http://localhost:8080/topics/${action.id}`, {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ ivertinimas: el.ivertinimas++ })
+          })
+          return {
+            ...el,
+            ivertinimas: el.ivertinimas++
+          }
+        } else {
+          return el;
+        }
+      });
+      case TopicActionTypes.nepatinka:
+        return state.map(el => {
+          if (el.id === action.id) {
+            fetch(`http://localhost:8080/topics/${action.id}`, {
+              method: "PATCH",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({ ivertinimas: el.ivertinimas-- })
+            })
+            return {
+              ...el,
+              ivertinimas: el.ivertinimas--
+            }
+          } else {
+            return el;
+          }
+        });
     case TopicActionTypes.naujausi:
       const naujausi = sort(state).desc(u => u.publikuota);
       return naujausi;
@@ -77,21 +115,23 @@ const reducer = (state, action) => {
 
 const TopicProvider = ({ children }) => {
 
+  const [liked, setLiked] = useState([]);
+
   const [topics, setTopics] = useReducer(reducer, []);
   const [isLiked, setIsLiked] = useState([]);
 
   const [filterTextValue, updateFilterText] = useState('visi');
 
   const filteredProductList = topics.filter((product) => {
-    if(filterTextValue === 'atsakyti'){
+    if (filterTextValue === 'atsakyti') {
       return product.atsakyta === true;
-    } else if(filterTextValue === 'neatsakyti'){
+    } else if (filterTextValue === 'neatsakyti') {
       return product.atsakyta !== true;
     } else {
       return product;
     }
   })
-  
+
   const onFilterValueSelection = (filterValue) => {
     updateFilterText(filterValue)
   }
@@ -114,7 +154,9 @@ const TopicProvider = ({ children }) => {
         isLiked,
         setIsLiked,
         onFilterValueSelection,
-        filteredProductList
+        filteredProductList,
+        liked, 
+        setLiked
       }}
     >
       {children}

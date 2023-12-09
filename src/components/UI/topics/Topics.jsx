@@ -7,6 +7,9 @@ const StyledMain = styled.main`
   > :last-child{
     padding-bottom: 0;
   }
+  >div:nth-child(2n){
+    background-color: #F6F6F6;
+  }
 `;
 
 const Topics = () => {
@@ -17,7 +20,7 @@ const Topics = () => {
     <StyledMain>
       {
         filteredProductList.map(singleTopic => {
-          return <Topic 
+          return <Topic
             key={singleTopic.id}
             data={singleTopic}
           />

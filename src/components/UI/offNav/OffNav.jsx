@@ -24,7 +24,7 @@ const OffNav = () => {
     <StyledNav>
       <ul>
         <li><Link style={{textDecoration: 'none', color: 'black'}} to="/">Pagrindinis</Link></li>
-        <li>Apie mus</li>
+        <li><Link style={{textDecoration: 'none', color: 'black'}} to="/apie">Apie mus</Link></li>
         <li><Link style={{textDecoration: 'none', color: 'black'}} to="/prisijungti">Prisijungti</Link></li>
         <li><Link style={{textDecoration: 'none', color: 'black'}} to="/registracija">Užsiregistruoti</Link></li>
       </ul>

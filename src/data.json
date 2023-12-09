@@ -56,9 +56,9 @@
       "publikuota": "12/6/2023",
       "balsuSkaicius": 0,
       "isiminta": 0,
-      "ivertinimas": 0,
+      "ivertinimas": 8,
       "redaguota": false,
-      "atsakyta": false,
+      "atsakyta": true,
       "kiekTuriKomentaru": 1
     },
     {
@@ -75,7 +75,7 @@
       "publikuota": "12/6/2023",
       "balsuSkaicius": 0,
       "isiminta": 0,
-      "ivertinimas": 0,
+      "ivertinimas": 2,
       "redaguota": false,
       "atsakyta": false,
       "kiekTuriKomentaru": 1
@@ -94,7 +94,7 @@
       "publikuota": "12/6/2023",
       "balsuSkaicius": 0,
       "isiminta": 0,
-      "ivertinimas": 0,
+      "ivertinimas": 1,
       "redaguota": false,
       "atsakyta": true
     },
@@ -114,7 +114,8 @@
       "isiminta": 0,
       "ivertinimas": 0,
       "redaguota": false,
-      "kiekTuriKomentaru": 7
+      "kiekTuriKomentaru": 7,
+      "atsakyta": true
     },
     {
       "id": "6f4ec9db-eb9e-414a-966d-d7ab426f4908",
@@ -149,9 +150,9 @@
       "publikuota": "12/7/2023",
       "balsuSkaicius": 0,
       "isiminta": 0,
-      "ivertinimas": 0,
+      "ivertinimas": 2,
       "redaguota": false,
-      "atsakyta": false,
+      "atsakyta": true,
       "kiekTuriKomentaru": 1
     },
     {
@@ -189,6 +190,42 @@
       "redaguota": false,
       "atsakyta": false,
       "kiekTuriKomentaru": 2
+    },
+    {
+      "id": "d1918674-c8b0-4114-86e4-e43b464ab052",
+      "userId": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
+      "pavadinimas": "npm paketas",
+      "aprasymas": "Laba diena, turiu klausima kaip isirasyti npm paketa?",
+      "zymos": [
+        "npm",
+        " isirasymas"
+      ],
+      "nuotrauka": "",
+      "autorius": "boxbox",
+      "publikuota": "12/8/2023",
+      "balsuSkaicius": 0,
+      "isiminta": 0,
+      "ivertinimas": 4,
+      "redaguota": false,
+      "atsakyta": false
+    },
+    {
+      "id": "7aabeb99-d882-4e7b-b279-786e5d7107cc",
+      "userId": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
+      "pavadinimas": "Kaip isirasyti npm?",
+      "aprasymas": "Noreciau paprasyti pagalbos isirasant npm i kompiuteri. Gal turite kokiu pamoku?",
+      "zymos": [
+        "npm",
+        " js"
+      ],
+      "nuotrauka": "",
+      "autorius": "boxbox",
+      "publikuota": "12/9/2023",
+      "balsuSkaicius": 0,
+      "isiminta": 0,
+      "ivertinimas": 3,
+      "redaguota": false,
+      "atsakyta": false
     }
   ],
   "comments": [
@@ -199,7 +236,7 @@
       "autorius": "boxbox",
       "publikuota": "12/7/2023",
       "balsuSkaicius": 0,
-      "ivertinimas": 0,
+      "ivertinimas": 2,
       "postId": "0a28b412-50e3-4079-913f-4eeac1bd41f4",
       "redaguota": false
     },
@@ -210,7 +247,7 @@
       "autorius": "boxbox",
       "publikuota": "12/7/2023",
       "balsuSkaicius": 0,
-      "ivertinimas": 0,
+      "ivertinimas": 1,
       "postId": "0a28b412-50e3-4079-913f-4eeac1bd41f4",
       "redaguota": false
     },
@@ -226,24 +263,13 @@
       "redaguota": false
     },
     {
-      "id": "19f5cd91-ef5e-4bfd-b06b-416def1295a1",
-      "userId": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
-      "komentaras": "Okay :DDDD",
-      "autorius": "boxbox",
-      "publikuota": "12/7/2023",
-      "balsuSkaicius": 0,
-      "ivertinimas": 0,
-      "postId": "e142f22d-7371-43a0-a22f-764598344dbd",
-      "redaguota": false
-    },
-    {
       "id": "0ae3c173-36b2-4ccb-aee3-d03bea9cdc0c",
       "userId": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
       "komentaras": "Woooow",
       "autorius": "boxbox",
       "publikuota": "12/7/2023",
       "balsuSkaicius": 0,
-      "ivertinimas": 0,
+      "ivertinimas": 1,
       "postId": "0a28b412-50e3-4079-913f-4eeac1bd41f4",
       "redaguota": false
     },
@@ -267,6 +293,50 @@
       "balsuSkaicius": 0,
       "ivertinimas": 0,
       "postId": "0295b20d-8df2-4724-9404-5ecd61bd6b4e",
+      "redaguota": false
+    },
+    {
+      "id": "166d9999-44b6-4088-a533-ef46ac77e638",
+      "userId": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
+      "komentaras": "Labas manau kad tai geras sprendimas",
+      "autorius": "boxbox",
+      "publikuota": "12/8/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "e142f22d-7371-43a0-a22f-764598344dbd",
+      "redaguota": false
+    },
+    {
+      "id": "cefe5627-8c3c-454d-945e-bdc08cf6deb9",
+      "userId": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
+      "komentaras": "p { color: red}",
+      "autorius": "boxbox",
+      "publikuota": "12/8/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "0295b20d-8df2-4724-9404-5ecd61bd6b4e",
+      "redaguota": false
+    },
+    {
+      "id": "940ab5ad-a85e-4062-a439-60d44c85882d",
+      "userId": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
+      "komentaras": "Geras sprendimas",
+      "autorius": "boxbox",
+      "publikuota": "12/8/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "e142f22d-7371-43a0-a22f-764598344dbd",
+      "redaguota": false
+    },
+    {
+      "id": "86f59bb8-c554-475d-adf4-023778e9e731",
+      "userId": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
+      "komentaras": "kazkur :D",
+      "autorius": "boxbox",
+      "publikuota": "12/8/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "21d199b3-d740-441c-aa63-1477c27a7604",
       "redaguota": false
     }
   ]
