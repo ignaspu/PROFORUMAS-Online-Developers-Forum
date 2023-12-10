@@ -89,6 +89,8 @@ const CommentsProvider = ({ children }) => {
 
   const [comments, setComments] = useReducer(reducer, []);
   const [arRedaguota, setArRedaguota] = useState({id: ''});
+  const [isLiked, setIsLiked] = useState(false);
+
 
   useEffect(() => {
     fetch(`http://localhost:8080/comments`)
@@ -106,7 +108,9 @@ const CommentsProvider = ({ children }) => {
         setComments,
         CommentsActionTypes,
         arRedaguota, 
-        setArRedaguota
+        setArRedaguota,
+        isLiked,
+        setIsLiked
       }}
     >
       {children}

@@ -57,7 +57,7 @@ const SingleQuestion = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [question, setQuestion] = useState('');
-  const { setTopics, TopicActionTypes, topics } = useContext(TopicContext);
+  const { setTopics, TopicActionTypes, topics, isLiked, setIsLiked } = useContext(TopicContext);
   const { loggedInUser } = useContext(UsersContext);
 
   useEffect(() => {
@@ -101,26 +101,28 @@ const SingleQuestion = () => {
         <div className="ratingAndInfo">
           <div className="rating">
             {
-              loggedInUser &&
+              loggedInUser && isLiked === false &&
               <p><i
                 onClick={() => {
                   setTopics({
                     type: TopicActionTypes.patinka,
                     id: question.id
                   })
+                  setIsLiked(true)
                 }}
                 className="bi bi-hand-thumbs-up"></i></p>
             }
             <span>{topics.find(element => element.id === id).ivertinimas}</span>
             <p>Įvertinimas</p>
             {
-              loggedInUser &&
+              loggedInUser && isLiked === false &&
               <p><i
                 onClick={() => {
                   setTopics({
                     type: TopicActionTypes.nepatinka,
                     id: question.id
                   })
+                  setIsLiked(true)
                 }}
                 className="bi bi-hand-thumbs-down"></i></p>
             }

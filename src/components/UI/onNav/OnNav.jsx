@@ -23,6 +23,7 @@ display: flex;
     }
     > button:hover{
       cursor: pointer;
+      background-color: #d8dad8;
     }
   }
   > ul{

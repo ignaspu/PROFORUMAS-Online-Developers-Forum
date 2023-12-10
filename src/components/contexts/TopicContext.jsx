@@ -118,7 +118,7 @@ const TopicProvider = ({ children }) => {
   const [liked, setLiked] = useState([]);
 
   const [topics, setTopics] = useReducer(reducer, []);
-  const [isLiked, setIsLiked] = useState([]);
+  const [isLiked, setIsLiked] = useState(false);
 
   const [filterTextValue, updateFilterText] = useState('visi');
 
