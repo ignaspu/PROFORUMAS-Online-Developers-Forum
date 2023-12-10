@@ -66,7 +66,6 @@ const AddGame = () => {
       .trim(),
     zymos: Yup.string()
       .min(3, 'Žymoje mažiausiai 3 simboliai')
-      .required('Laukas yra privalomas')
       .trim(),
   });
 
@@ -84,7 +83,8 @@ const AddGame = () => {
         balsuSkaicius: 0,
         isiminta: 0,
         ivertinimas: 0,
-        redaguota: false
+        redaguota: false,
+        atsakyta: false,
       };
       setTopics({
         type: TopicActionTypes.add,

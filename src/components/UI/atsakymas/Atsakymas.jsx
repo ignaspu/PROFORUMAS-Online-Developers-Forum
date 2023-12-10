@@ -3,6 +3,7 @@ import { useContext } from "react";
 import UsersContext from "../../contexts/UsersContext";
 import CommentsContext from "../../contexts/CommentsContext";
 import RedaguotiKomentara from "../redaguotiKomentara/RedaguotiKomentara";
+import TopicContext from "../../contexts/TopicContext";
 
 const StyledComments = styled.div`
   margin: 5px 0;
@@ -43,14 +44,37 @@ const StyledComments = styled.div`
 const Atsakymas = ({ data }) => {
 
   const { loggedInUser } = useContext(UsersContext);
-  const { setComments, CommentsActionTypes, setArRedaguota, arRedaguota } = useContext(CommentsContext);
+  const { setComments, CommentsActionTypes, setArRedaguota, arRedaguota, isLiked, setIsLiked } = useContext(CommentsContext);
 
   return (
     <StyledComments>
       <div className="rating">
-        <p><i class="bi bi-hand-thumbs-up"></i></p>
+        {
+          loggedInUser && isLiked === false &&
+          <p><i
+            onClick={() => {
+              setComments({
+                type: CommentsActionTypes.like,
+                id: data.id
+              })
+              setIsLiked(true);
+            }}
+            className="bi bi-hand-thumbs-up"></i></p>
+        }
         <span>{data.ivertinimas}</span>
-        <p><i class="bi bi-hand-thumbs-down"></i></p>
+        <p>Įvertinimas</p>
+        {
+          loggedInUser && isLiked === false &&
+          <p><i
+            onClick={() => {
+              setComments({
+                type: CommentsActionTypes.dislike,
+                id: data.id
+              })
+              setIsLiked(true);
+            }}
+            className="bi bi-hand-thumbs-down"></i></p>
+        }
       </div>
       <div className="comment">
         <div className="name">
@@ -60,24 +84,24 @@ const Atsakymas = ({ data }) => {
         <div>
           <p>Autorius: {data.autorius}</p>
           <p>Publikuotas: {data.publikuota}</p>
-          <p>Balsų skaičius: {data.balsuSkaicius}</p>
         </div>
       </div>
       {
         loggedInUser.id === data.userId &&
         <div>
           <button
-            onClick={() => setArRedaguota({id: data.id})}
+            onClick={() => setArRedaguota({ id: data.id })}
           >Redaguoti</button>
           <button
-            onClick={() => setComments({ type: CommentsActionTypes.remove, id: data.id })}
-          >Ištrinti</button>
+            onClick={() => {
+              setComments({ type: CommentsActionTypes.remove, id: data.id });
+            }}>Ištrinti</button>
         </div>
       }
       {
         arRedaguota.id === data.id &&
         <RedaguotiKomentara
-        id={data.id}
+          id={data.id}
         />
       }
     </StyledComments >

@@ -2,10 +2,12 @@ import { createContext, useEffect, useReducer, useState } from "react";
 
 const CommentsContext = createContext();
 const CommentsActionTypes = {
-  get_all: 'get all topics from db',
-  add: 'add one new topic',
-  remove: 'remove one specific topic',
-  edit: 'edit one specific topic'
+  get_all: 'get all comments from db',
+  add: 'add one new comment',
+  remove: 'remove one specific comment',
+  edit: 'edit one specific comment',
+  like: 'like comment',
+  dislike: 'dislike comment'
 };
 
 const reducer = (state, action) => {
@@ -41,6 +43,42 @@ const reducer = (state, action) => {
           return el;
         }
       });
+      case CommentsActionTypes.like:
+        return state.map(el => {
+          if (el.id === action.id) {
+            fetch(`http://localhost:8080/comments/${action.id}`, {
+              method: "PATCH",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({ ivertinimas: el.ivertinimas++ })
+            })
+            return {
+              ...el,
+              ivertinimas: el.ivertinimas++
+            }
+          } else {
+            return el;
+          }
+        });
+        case CommentsActionTypes.dislike:
+          return state.map(el => {
+            if (el.id === action.id) {
+              fetch(`http://localhost:8080/comments/${action.id}`, {
+                method: "PATCH",
+                headers: {
+                  "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ ivertinimas: el.ivertinimas-- })
+              })
+              return {
+                ...el,
+                ivertinimas: el.ivertinimas--
+              }
+            } else {
+              return el;
+            }
+          });
     default:
       console.log("klaida: toks veiksmas nerastas", action.type);
       return state;
@@ -51,8 +89,8 @@ const CommentsProvider = ({ children }) => {
 
   const [comments, setComments] = useReducer(reducer, []);
   const [arRedaguota, setArRedaguota] = useState({id: ''});
+  const [isLiked, setIsLiked] = useState(false);
 
-  const [isLiked, setIsLiked] = useState([]);
 
   useEffect(() => {
     fetch(`http://localhost:8080/comments`)
@@ -69,10 +107,10 @@ const CommentsProvider = ({ children }) => {
         comments,
         setComments,
         CommentsActionTypes,
-        isLiked,
-        setIsLiked,
         arRedaguota, 
-        setArRedaguota
+        setArRedaguota,
+        isLiked,
+        setIsLiked
       }}
     >
       {children}

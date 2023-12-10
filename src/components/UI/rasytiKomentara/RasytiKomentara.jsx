@@ -3,10 +3,10 @@ import * as Yup from 'yup';
 import styled from 'styled-components';
 import { v4 as uuid } from 'uuid';
 import { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
 import FormikInput from '../../UI/input/FormikInput';
 import UsersContext from '../../contexts/UsersContext';
 import CommentsContext from '../../contexts/CommentsContext';
+import TopicContext from "../../contexts/TopicContext";
 
 const StyledSection = styled.section`
   display: flex;
@@ -21,10 +21,13 @@ const RasytiKomentara = ({ questionId }) => {
 
   const { setComments, CommentsActionTypes } = useContext(CommentsContext);
   const { loggedInUser } = useContext(UsersContext);
+  const { setTopics, topics, TopicActionTypes } = useContext(TopicContext);
 
   const values = {
     komentaras: '',
   };
+
+  const specTopic = topics.find(topic => topic.id === questionId)
 
   const validationSchema = Yup.object({
     komentaras: Yup.string()
@@ -49,6 +52,10 @@ const RasytiKomentara = ({ questionId }) => {
         postId: questionId,
         redaguota: false
       };
+      setTopics({
+        type: TopicActionTypes.keistiStatusa,
+        id: questionId
+      });
       setComments({
         type: CommentsActionTypes.add,
         data: finalValues
