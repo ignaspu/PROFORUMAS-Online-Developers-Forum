@@ -30,12 +30,12 @@ const Header = () => {
   return (
     <StyledHeader>
       <div>
-       <h1>PROFORUMAS.lt</h1>
+        <h1>PROFORUMAS.lt</h1>
       </div>
       {
-        ! loggedInUser
-        ? <OffNav/>
-        : <OnNav/>
+        !loggedInUser
+          ? <OffNav />
+          : <OnNav />
       }
     </StyledHeader>
   );

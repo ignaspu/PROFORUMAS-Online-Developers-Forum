@@ -9,7 +9,7 @@ const StyledRedagavimas = styled.div`
 
 `;
 
-const RedaguotiKomentara = ({id}) => {
+const RedaguotiKomentara = ({ id }) => {
   const { setComments, CommentsActionTypes, setArRedaguota } = useContext(CommentsContext);
   const [formValues, setFormValues] = useState({
     komentaras: ''
@@ -46,7 +46,7 @@ const RedaguotiKomentara = ({id}) => {
               ...values,
               redaguota: true
             };
-            setArRedaguota({id: ''})
+            setArRedaguota({ id: '' })
             setComments({
               type: CommentsActionTypes.edit,
               id: id,
@@ -61,7 +61,7 @@ const RedaguotiKomentara = ({id}) => {
                 name="komentaras"
                 formik={props}
               />
-              <button type="Submit">Redaguoti</button>
+              <button className='submitBttn' type="Submit">Redaguoti</button>
             </form>
           )}
         </Formik>

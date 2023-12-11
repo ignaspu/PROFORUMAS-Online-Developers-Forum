@@ -50,6 +50,21 @@ const StyledMain = styled.main`
     justify-content: flex-end;
     gap: 5px;
   }
+  .submitBttn{
+    background-color: #c3b8b8;
+    border: 0;
+    border-radius: 10px;
+    padding: 3px 8px;
+    }
+    .submitBttn:last-child{
+      color: #b30000;
+    }
+    .submitBttn:last-child{
+      cursor: pointer;
+    }
+    .submitBttn:first-child{
+      cursor: pointer;
+    }
 `;
 
 const SingleQuestion = () => {
@@ -79,10 +94,10 @@ const SingleQuestion = () => {
       {
         loggedInUser.id === question.userId &&
         <div className="mygtukai">
-          <button
+          <button className="submitBttn"
             onClick={() => navigate(`/klausimas/redaguoti/${id}`)}
           >Redaguoti</button>
-          <button
+          <button className="submitBttn"
             onClick={() => {
               setTopics({ type: TopicActionTypes.remove, id: id });
               navigate("/");
@@ -104,20 +119,20 @@ const SingleQuestion = () => {
             {
               loggedInUser &&
               <p><i
-              onClick={() => {
-                if (question.userId === loggedInUser.id) {
-                  window.alert('Savo pranešimo vertinti negalima')
-                } else if (liked.find(el => el.postId === question.id) !== undefined) {
-                  window.alert('Jūs jau įvertinote šį pranešimą')
-                } else {
-                  const newLiked = { id: liked.length + 1, authorId: loggedInUser.id, postId: question.id }
-                  setLiked([...liked, newLiked])
-                  setTopics({
-                    type: TopicActionTypes.patinka,
-                    id: question.id
-                  })
-                }
-              }}
+                onClick={() => {
+                  if (question.userId === loggedInUser.id) {
+                    window.alert('Savo pranešimo vertinti negalima')
+                  } else if (liked.find(el => el.postId === question.id) !== undefined) {
+                    window.alert('Jūs jau įvertinote šį pranešimą')
+                  } else {
+                    const newLiked = { id: liked.length + 1, authorId: loggedInUser.id, postId: question.id }
+                    setLiked([...liked, newLiked])
+                    setTopics({
+                      type: TopicActionTypes.patinka,
+                      id: question.id
+                    })
+                  }
+                }}
                 className="bi bi-hand-thumbs-up"></i></p>
             }
             <span>{topics.find(element => element.id === id).ivertinimas}</span>
@@ -149,7 +164,7 @@ const SingleQuestion = () => {
           </div>
         </div>
       </div>
-      <h1>Atsakymai:</h1>
+      <h1>Komentarai:</h1>
       {
         loggedInUser &&
         <RasytiKomentara

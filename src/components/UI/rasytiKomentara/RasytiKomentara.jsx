@@ -12,22 +12,40 @@ const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: #eae8e8;
   padding: 10px;
   margin-bottom: 10px;
+  > h1{
+    font-size: 1.25rem;
+  }
+  > form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    > button{
+      background-color: #DEC4C4;
+      border: 0;
+      border-radius: 10px;
+    }
+    > button:hover{
+      background-color: #8e8787; 
+      cursor: pointer;    
+    }
+  }
 `;
 
 const RasytiKomentara = ({ questionId }) => {
 
   const { setComments, CommentsActionTypes } = useContext(CommentsContext);
   const { loggedInUser } = useContext(UsersContext);
-  const { setTopics, topics, TopicActionTypes } = useContext(TopicContext);
+  const { setTopics, TopicActionTypes } = useContext(TopicContext);
 
   const values = {
     komentaras: '',
   };
 
-  const specTopic = topics.find(topic => topic.id === questionId)
+  const data = new Date().toISOString().slice(0,16).replace("T", " ");
 
   const validationSchema = Yup.object({
     komentaras: Yup.string()
@@ -46,7 +64,7 @@ const RasytiKomentara = ({ questionId }) => {
         userId: loggedInUser.id,
         ...values,
         autorius: loggedInUser.vartotojoVardas,
-        publikuota: new Date().toLocaleDateString(),
+        publikuota: data,
         balsuSkaicius: 0,
         ivertinimas: 0,
         postId: questionId,

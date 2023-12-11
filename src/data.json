@@ -265,6 +265,25 @@
       "ivertinimas": 0,
       "redaguota": false,
       "atsakyta": true
+    },
+    {
+      "id": "a5fc7585-f129-4067-9721-ecbdce7fbe86",
+      "userId": "1ae1d4a8-2f29-4e01-b806-50828af580ae",
+      "pavadinimas": "ar tikrai reikia it specialistu ?",
+      "aprasymas": "Perziurejau katik linkedin'a keleta skelbimu tai pvz i php developer pozicijas aplikuoja maziausiai 50+ veidu o kai kur ir visi 200+. I javascript pozicijas irgi ten nuo 100+ prasideda.  Spaudoj ir per visus galus pasakoja, kaip It specialistu truksta.Tai pasakoja ne tik mokymo istaigos stengiancios pritraukti klientu i kursus, bet ir darbo birzos, personalo atstovai",
+      "zymos": [
+        "it",
+        " specialistu",
+        " paklausa"
+      ],
+      "nuotrauka": "",
+      "autorius": "testas",
+      "publikuota": "2023-12-11 19:42",
+      "balsuSkaicius": 0,
+      "isiminta": 0,
+      "ivertinimas": 0,
+      "redaguota": false,
+      "atsakyta": false
     }
   ],
   "comments": [

@@ -11,6 +11,22 @@ const StyledComments = styled.div`
   padding: 5px 10px;
   gap: 30px;
   justify-content: flex-start;
+  .submitBttn{
+    background-color: #c3b8b8;
+    border: 0;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 3px 8px;
+    }
+    .submitBttn:last-child{
+      color: #b30000;
+    }
+    .submitBttn:last-child{
+      cursor: pointer;
+    }
+    .submitBttn:first-child{
+      cursor: pointer;
+    }
   > .rating {
     display: flex;
     flex-direction: column;
@@ -102,10 +118,10 @@ const Atsakymas = ({ data }) => {
       {
         loggedInUser.id === data.userId &&
         <div>
-          <button
+          <button className="submitBttn"
             onClick={() => setArRedaguota({ id: data.id })}
           >Redaguoti</button>
-          <button
+          <button className="submitBttn"
             onClick={() => {
               setComments({ type: CommentsActionTypes.remove, id: data.id });
             }}>Ištrinti</button>
