@@ -57,8 +57,9 @@ const SingleQuestion = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [question, setQuestion] = useState('');
-  const { setTopics, TopicActionTypes, topics, isLiked, setIsLiked } = useContext(TopicContext);
+  const { setTopics, TopicActionTypes, topics, liked, setLiked } = useContext(TopicContext);
   const { loggedInUser } = useContext(UsersContext);
+
 
   useEffect(() => {
     fetch(`http://localhost:8080/topics/${id}`)
@@ -101,28 +102,42 @@ const SingleQuestion = () => {
         <div className="ratingAndInfo">
           <div className="rating">
             {
-              loggedInUser && isLiked === false &&
+              loggedInUser &&
               <p><i
-                onClick={() => {
+              onClick={() => {
+                if (question.userId === loggedInUser.id) {
+                  window.alert('Savo pranešimo vertinti negalima')
+                } else if (liked.find(el => el.postId === question.id) !== undefined) {
+                  window.alert('Jūs jau įvertinote šį pranešimą')
+                } else {
+                  const newLiked = { id: liked.length + 1, authorId: loggedInUser.id, postId: question.id }
+                  setLiked([...liked, newLiked])
                   setTopics({
                     type: TopicActionTypes.patinka,
                     id: question.id
                   })
-                  setIsLiked(true)
-                }}
+                }
+              }}
                 className="bi bi-hand-thumbs-up"></i></p>
             }
             <span>{topics.find(element => element.id === id).ivertinimas}</span>
             <p>Įvertinimas</p>
             {
-              loggedInUser && isLiked === false &&
+              loggedInUser &&
               <p><i
                 onClick={() => {
-                  setTopics({
-                    type: TopicActionTypes.nepatinka,
-                    id: question.id
-                  })
-                  setIsLiked(true)
+                  if (question.userId === loggedInUser.id) {
+                    window.alert('Savo pranešimo vertinti negalima')
+                  } else if (liked.find(el => el.postId === question.id) !== undefined) {
+                    window.alert('Jūs jau įvertinote šį pranešimą')
+                  } else {
+                    const newLiked = { id: liked.length + 1, authorId: loggedInUser.id, postId: question.id }
+                    setLiked([...liked, newLiked])
+                    setTopics({
+                      type: TopicActionTypes.nepatinka,
+                      id: question.id
+                    })
+                  }
                 }}
                 className="bi bi-hand-thumbs-down"></i></p>
             }

@@ -3,7 +3,6 @@ import { useContext } from "react";
 import UsersContext from "../../contexts/UsersContext";
 import CommentsContext from "../../contexts/CommentsContext";
 import RedaguotiKomentara from "../redaguotiKomentara/RedaguotiKomentara";
-import TopicContext from "../../contexts/TopicContext";
 
 const StyledComments = styled.div`
   margin: 5px 0;
@@ -44,34 +43,48 @@ const StyledComments = styled.div`
 const Atsakymas = ({ data }) => {
 
   const { loggedInUser } = useContext(UsersContext);
-  const { setComments, CommentsActionTypes, setArRedaguota, arRedaguota, isLiked, setIsLiked } = useContext(CommentsContext);
+  const { setComments, CommentsActionTypes, setArRedaguota, arRedaguota, liked, setLiked } = useContext(CommentsContext);
 
   return (
     <StyledComments>
       <div className="rating">
         {
-          loggedInUser && isLiked === false &&
+          loggedInUser &&
           <p><i
             onClick={() => {
-              setComments({
-                type: CommentsActionTypes.like,
-                id: data.id
-              })
-              setIsLiked(true);
+              if (data.userId === loggedInUser.id) {
+                window.alert('Savo pranešimo vertinti negalima')
+              } else if (liked.find(el => el.postId === data.id) !== undefined) {
+                window.alert('Jūs jau įvertinote šį pranešimą')
+              } else {
+                const newLiked = { id: liked.length + 1, authorId: loggedInUser.id, postId: data.id }
+                setLiked([...liked, newLiked])
+                setComments({
+                  type: CommentsActionTypes.like,
+                  id: data.id
+                })
+              }
             }}
             className="bi bi-hand-thumbs-up"></i></p>
         }
         <span>{data.ivertinimas}</span>
         <p>Įvertinimas</p>
         {
-          loggedInUser && isLiked === false &&
+          loggedInUser &&
           <p><i
             onClick={() => {
-              setComments({
-                type: CommentsActionTypes.dislike,
-                id: data.id
-              })
-              setIsLiked(true);
+              if (data.userId === loggedInUser.id) {
+                window.alert('Savo pranešimo vertinti negalima')
+              } else if (liked.find(el => el.postId === data.id) !== undefined) {
+                window.alert('Jūs jau įvertinote šį pranešimą')
+              } else {
+                const newLiked = { id: liked.length + 1, authorId: loggedInUser.id, postId: data.id }
+                setLiked([...liked, newLiked])
+                setComments({
+                  type: CommentsActionTypes.dislike,
+                  id: data.id
+                })
+              }
             }}
             className="bi bi-hand-thumbs-down"></i></p>
         }
