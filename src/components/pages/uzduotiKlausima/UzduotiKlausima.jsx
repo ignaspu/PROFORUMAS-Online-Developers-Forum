@@ -40,6 +40,8 @@ const StyledAddFormPage = styled.main`
 
 const AddGame = () => {
 
+  const data = new Date().toISOString().slice(0,16).replace("T", " ");
+
   const { setTopics, TopicActionTypes } = useContext(TopicContext);
   const { loggedInUser } = useContext(UsersContext);
   const navigate = useNavigate();
@@ -79,7 +81,7 @@ const AddGame = () => {
         ...values,
         zymos: values.zymos.split(';'),
         autorius: loggedInUser.vartotojoVardas,
-        publikuota: new Date().toLocaleDateString(),
+        publikuota: data,
         balsuSkaicius: 0,
         isiminta: 0,
         ivertinimas: 0,

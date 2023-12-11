@@ -39,6 +39,26 @@
       "registracijosData": "2023-12-07",
       "profilioNuotrauka": "https://thinksport.com.au/wp-content/uploads/2020/01/avatar-.jpg",
       "likedIds": ""
+    },
+    {
+      "id": "5e609912-2c9f-4431-90b1-b0723c8a0946",
+      "vartotojoVardas": "blikas",
+      "email": "blikas@blikas.lt",
+      "slaptazodis": "$2a$08$oyuOhRfgqcxDwKA3DxF3J.Iohv28VA7gPZnrwxjn5eLSqe6QwdnUq",
+      "amzius": 24,
+      "registracijosData": "2023-12-10",
+      "profilioNuotrauka": "https://wallpapers.com/images/hd/scary-profile-pictures-un3kefzpnw7idrn5.jpg",
+      "likedIds": ""
+    },
+    {
+      "id": "1ae1d4a8-2f29-4e01-b806-50828af580ae",
+      "vartotojoVardas": "testas",
+      "email": "test@test.lt",
+      "slaptazodis": "$2a$08$TAVtgDYOMQGW5.fUepj34eTSZ6K7LCyAyrY1BoNCpAJ5xLACRZvYi",
+      "amzius": 22,
+      "registracijosData": "2023-12-11",
+      "profilioNuotrauka": "https://thinksport.com.au/wp-content/uploads/2020/01/avatar-.jpg",
+      "likedIds": ""
     }
   ],
   "topics": [
@@ -53,10 +73,10 @@
       ],
       "nuotrauka": "",
       "autorius": "mouse55",
-      "publikuota": "12/6/2023",
+      "publikuota": "2023-12-06 12:11",
       "balsuSkaicius": 0,
       "isiminta": 0,
-      "ivertinimas": 11,
+      "ivertinimas": 4,
       "redaguota": false,
       "atsakyta": true,
       "kiekTuriKomentaru": 1
@@ -72,12 +92,12 @@
       ],
       "nuotrauka": "",
       "autorius": "andrius",
-      "publikuota": "12/6/2023",
+      "publikuota": "2023-12-06 13:32",
       "balsuSkaicius": 0,
       "isiminta": 0,
       "ivertinimas": 2,
       "redaguota": false,
-      "atsakyta": false,
+      "atsakyta": true,
       "kiekTuriKomentaru": 1
     },
     {
@@ -91,7 +111,7 @@
       ],
       "nuotrauka": "",
       "autorius": "andrius",
-      "publikuota": "12/6/2023",
+      "publikuota": "2023-12-06 15:20",
       "balsuSkaicius": 0,
       "isiminta": 0,
       "ivertinimas": 1,
@@ -109,7 +129,7 @@
       ],
       "nuotrauka": "",
       "autorius": "black_monkey",
-      "publikuota": "12/6/2023",
+      "publikuota": "2023-12-06 16:40",
       "balsuSkaicius": 0,
       "isiminta": 0,
       "ivertinimas": 0,
@@ -128,7 +148,7 @@
       ],
       "nuotrauka": "https://www.lrt.lt/img/2019/12/02/560399-339184-1287x836.jpg",
       "autorius": "black_monkey",
-      "publikuota": "12/6/2023",
+      "publikuota": "2023-12-06 21:14",
       "balsuSkaicius": 0,
       "isiminta": 0,
       "ivertinimas": 0,
@@ -147,7 +167,7 @@
       ],
       "nuotrauka": "",
       "autorius": "boxbox",
-      "publikuota": "12/7/2023",
+      "publikuota": "2023-12-07 16:50",
       "balsuSkaicius": 0,
       "isiminta": 0,
       "ivertinimas": 2,
@@ -165,7 +185,7 @@
       ],
       "nuotrauka": "",
       "autorius": "boxbox",
-      "publikuota": "12/7/2023",
+      "publikuota": "2023-12-07 18:47",
       "balsuSkaicius": 0,
       "isiminta": 0,
       "ivertinimas": 0,
@@ -183,7 +203,7 @@
       ],
       "nuotrauka": "",
       "autorius": "boxbox",
-      "publikuota": "12/7/2023",
+      "publikuota": "2023-12-07 20:21",
       "balsuSkaicius": 0,
       "isiminta": 0,
       "ivertinimas": 0,
@@ -202,7 +222,7 @@
       ],
       "nuotrauka": "",
       "autorius": "boxbox",
-      "publikuota": "12/8/2023",
+      "publikuota": "2023-12-08 18:14",
       "balsuSkaicius": 0,
       "isiminta": 0,
       "ivertinimas": 4,
@@ -220,10 +240,48 @@
       ],
       "nuotrauka": "",
       "autorius": "boxbox",
-      "publikuota": "12/9/2023",
+      "publikuota": "2023-12-09 11:46",
       "balsuSkaicius": 0,
       "isiminta": 0,
       "ivertinimas": 3,
+      "redaguota": false,
+      "atsakyta": false
+    },
+    {
+      "id": "33c43d71-ed1e-462b-89cd-023f7045f907",
+      "userId": "5e609912-2c9f-4431-90b1-b0723c8a0946",
+      "pavadinimas": "Kompiuterio rinkimasis",
+      "aprasymas": "Sveiki, nezinau koki kompiuteri isirinkti. Galvoju apie apple macbook pro Gal turite kokiu pasiulymu? Megstu geiminti ir programuoti.",
+      "zymos": [
+        "gaming",
+        " programming",
+        " computer"
+      ],
+      "nuotrauka": "https://lt2.pigugroup.eu/colours/565/500/09/56550009/apple-macbook-pro-133-eng-silver-04800-pirkti_reference.jpg",
+      "autorius": "blikas",
+      "publikuota": "2023-12-10 12:13",
+      "balsuSkaicius": 0,
+      "isiminta": 0,
+      "ivertinimas": 0,
+      "redaguota": false,
+      "atsakyta": true
+    },
+    {
+      "id": "a5fc7585-f129-4067-9721-ecbdce7fbe86",
+      "userId": "1ae1d4a8-2f29-4e01-b806-50828af580ae",
+      "pavadinimas": "ar tikrai reikia it specialistu ?",
+      "aprasymas": "Perziurejau katik linkedin'a keleta skelbimu tai pvz i php developer pozicijas aplikuoja maziausiai 50+ veidu o kai kur ir visi 200+. I javascript pozicijas irgi ten nuo 100+ prasideda.  Spaudoj ir per visus galus pasakoja, kaip It specialistu truksta.Tai pasakoja ne tik mokymo istaigos stengiancios pritraukti klientu i kursus, bet ir darbo birzos, personalo atstovai",
+      "zymos": [
+        "it",
+        " specialistu",
+        " paklausa"
+      ],
+      "nuotrauka": "",
+      "autorius": "testas",
+      "publikuota": "2023-12-11 19:42",
+      "balsuSkaicius": 0,
+      "isiminta": 0,
+      "ivertinimas": 0,
       "redaguota": false,
       "atsakyta": false
     }
@@ -252,17 +310,6 @@
       "redaguota": false
     },
     {
-      "id": "b7f0761b-196e-4eaa-9233-1b9cdc890ca9",
-      "userId": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
-      "komentaras": "json serveris",
-      "autorius": "boxbox",
-      "publikuota": "12/7/2023",
-      "balsuSkaicius": 0,
-      "ivertinimas": 0,
-      "postId": "ae347e63-84e2-4c56-82b7-2335a869f784",
-      "redaguota": false
-    },
-    {
       "id": "0ae3c173-36b2-4ccb-aee3-d03bea9cdc0c",
       "userId": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
       "komentaras": "Woooow",
@@ -280,7 +327,7 @@
       "autorius": "boxbox",
       "publikuota": "12/7/2023",
       "balsuSkaicius": 0,
-      "ivertinimas": 0,
+      "ivertinimas": 1,
       "postId": "5fd216d3-103a-40ae-947a-dc226ef1bac6",
       "redaguota": false
     },
@@ -324,7 +371,7 @@
       "autorius": "boxbox",
       "publikuota": "12/8/2023",
       "balsuSkaicius": 0,
-      "ivertinimas": 2,
+      "ivertinimas": 9,
       "postId": "e142f22d-7371-43a0-a22f-764598344dbd",
       "redaguota": false
     },
@@ -337,6 +384,50 @@
       "balsuSkaicius": 0,
       "ivertinimas": 0,
       "postId": "21d199b3-d740-441c-aa63-1477c27a7604",
+      "redaguota": false
+    },
+    {
+      "id": "61146456-bfff-436b-bbb2-aec62885bfb0",
+      "userId": "859c3be7-5c51-479e-8e1a-62d5818cdec2",
+      "komentaras": "Nice :D",
+      "autorius": "boxbox",
+      "publikuota": "12/11/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "33c43d71-ed1e-462b-89cd-023f7045f907",
+      "redaguota": false
+    },
+    {
+      "id": "507c2109-4ebe-4105-bbe3-d07910d59679",
+      "userId": "1ae1d4a8-2f29-4e01-b806-50828af580ae",
+      "komentaras": ":DDDDDD normaliai",
+      "autorius": "testas",
+      "publikuota": "12/11/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 12,
+      "postId": "e142f22d-7371-43a0-a22f-764598344dbd",
+      "redaguota": true
+    },
+    {
+      "id": "1779a94f-7908-49d7-8ac1-70932a40e52c",
+      "userId": "1ae1d4a8-2f29-4e01-b806-50828af580ae",
+      "komentaras": "Normalia hebra :D",
+      "autorius": "testas",
+      "publikuota": "12/11/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "0a28b412-50e3-4079-913f-4eeac1bd41f4",
+      "redaguota": false
+    },
+    {
+      "id": "5ce735d8-e964-415b-8f77-025b99c5787d",
+      "userId": "1ae1d4a8-2f29-4e01-b806-50828af580ae",
+      "komentaras": "Testuojam :D",
+      "autorius": "testas",
+      "publikuota": "12/11/2023",
+      "balsuSkaicius": 0,
+      "ivertinimas": 0,
+      "postId": "e142f22d-7371-43a0-a22f-764598344dbd",
       "redaguota": false
     }
   ]

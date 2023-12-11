@@ -89,7 +89,8 @@ const CommentsProvider = ({ children }) => {
 
   const [comments, setComments] = useReducer(reducer, []);
   const [arRedaguota, setArRedaguota] = useState({id: ''});
-  const [isLiked, setIsLiked] = useState(false);
+
+  const [liked, setLiked] = useState([]);
 
 
   useEffect(() => {
@@ -109,8 +110,8 @@ const CommentsProvider = ({ children }) => {
         CommentsActionTypes,
         arRedaguota, 
         setArRedaguota,
-        isLiked,
-        setIsLiked
+        liked,
+        setLiked
       }}
     >
       {children}

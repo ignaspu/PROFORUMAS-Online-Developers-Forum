@@ -34,7 +34,7 @@ const StyledFilter = styled.div`
 
 const Filter = () => {
 
-  const { TopicActionTypes, setTopics, topics, onFilterValueSelection } = useContext(TopicContext);
+  const { TopicActionTypes, setTopics, onFilterValueSelection } = useContext(TopicContext);
 
   return (
     <>

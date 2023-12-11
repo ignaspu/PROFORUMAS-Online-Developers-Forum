@@ -83,24 +83,24 @@ const reducer = (state, action) => {
           return el;
         }
       });
-      case TopicActionTypes.nepatinka:
-        return state.map(el => {
-          if (el.id === action.id) {
-            fetch(`http://localhost:8080/topics/${action.id}`, {
-              method: "PATCH",
-              headers: {
-                "Content-Type": "application/json"
-              },
-              body: JSON.stringify({ ivertinimas: el.ivertinimas-- })
-            })
-            return {
-              ...el,
-              ivertinimas: el.ivertinimas--
-            }
-          } else {
-            return el;
+    case TopicActionTypes.nepatinka:
+      return state.map(el => {
+        if (el.id === action.id) {
+          fetch(`http://localhost:8080/topics/${action.id}`, {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ ivertinimas: el.ivertinimas-- })
+          })
+          return {
+            ...el,
+            ivertinimas: el.ivertinimas--
           }
-        });
+        } else {
+          return el;
+        }
+      });
     case TopicActionTypes.naujausi:
       const naujausi = sort(state).desc(u => u.publikuota);
       return naujausi;
@@ -118,7 +118,6 @@ const TopicProvider = ({ children }) => {
   const [liked, setLiked] = useState([]);
 
   const [topics, setTopics] = useReducer(reducer, []);
-  const [isLiked, setIsLiked] = useState(false);
 
   const [filterTextValue, updateFilterText] = useState('visi');
 
@@ -151,11 +150,9 @@ const TopicProvider = ({ children }) => {
         topics,
         setTopics,
         TopicActionTypes,
-        isLiked,
-        setIsLiked,
         onFilterValueSelection,
         filteredProductList,
-        liked, 
+        liked,
         setLiked
       }}
     >
