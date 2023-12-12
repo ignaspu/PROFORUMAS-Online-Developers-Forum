@@ -80,7 +80,6 @@ const reducer = (state, action) => {
             }
           });
     default:
-      console.log("klaida: toks veiksmas nerastas", action.type);
       return state;
   }
 }

@@ -25,7 +25,6 @@ const RedaguotiKomentara = ({ id }) => {
       })
   }, []);
 
-  console.log(id, formValues)
   const validationSchema = Yup.object({
     komentaras: Yup.string()
       .min(5, 'Komentare mažiausiai 5 simboliai')

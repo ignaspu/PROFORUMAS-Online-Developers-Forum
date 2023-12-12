@@ -108,7 +108,6 @@ const reducer = (state, action) => {
       const seniausi = sort(state).asc(u => u.publikuota);
       return seniausi;
     default:
-      console.log("error: action type not found", action.type);
       return state;
   }
 }
